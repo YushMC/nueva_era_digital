@@ -1,0 +1,31 @@
+{
+  "trabajos": [
+    {
+      "id": 1,
+      "name": "Orange",
+      "tipo": "Salud",
+      "descripcion": "hola xd",
+      "enlace": "#",
+      "url_logo": "",
+      "capturas": "#"
+    },
+    {
+      "id": 2,
+      "name": "Orange",
+      "tipo": "Viajes",
+      "descripcion": "hola xd",
+      "enlace": "#",
+      "url_logo": "",
+      "capturas": "#"
+    },
+    {
+      "id": 3,
+      "name": "Orange",
+      "tipo": "Tecnología",
+      "descripcion": "hola xd",
+      "enlace": "#",
+      "url_logo": "",
+      "capturas": "#"
+    }
+  ]
+}

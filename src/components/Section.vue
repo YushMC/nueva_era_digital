@@ -1,0 +1,89 @@
+<template>
+  <section class="sections">
+    <div class="content_text">
+      <h5 class="subtitulos">{{ subtitulo_seccion }}</h5>
+      <h3 class="titulos">{{ titulo_seccion }}</h3>
+      <p>
+        {{ parrafo_seccion }}
+      </p>
+    </div>
+    <div class="content_media">
+      <img :src="url_img_seccion" alt="" />
+    </div>
+  </section>
+</template>
+
+<script setup>
+import { ref } from "vue";
+
+const subtitulo_seccion = ref("");
+const titulo_seccion = ref("");
+const parrafo_seccion = ref("");
+const url_img_seccion = ref("");
+
+const props = defineProps({
+  titulo_section: {
+    type: String,
+    required: true,
+  },
+  subtitulo_section: {
+    type: String,
+    required: true,
+  },
+  url_img: {
+    type: String,
+    required: true,
+  },
+  parrafo_section: {
+    type: String,
+    required: true,
+  },
+});
+
+subtitulo_seccion.value = props.subtitulo_section;
+titulo_seccion.value = props.titulo_section;
+url_img_seccion.value = props.url_img;
+parrafo_seccion.value = props.parrafo_section;
+</script>
+
+<style lang="scss" scoped>
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_prefabs.scss" as *;
+
+.sections {
+  width: 80%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  .content_text {
+    width: 48%;
+    @include columnas_flexibles_izquierda();
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 4% 0;
+    }
+  }
+  .content_media {
+    width: 48%;
+    @include centrar_elementos();
+    img {
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      width: 300px;
+      border-radius: $border_radius_img;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column !important;
+  }
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse !important;
+  }
+}
+</style>

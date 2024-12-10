@@ -1,0 +1,12 @@
+{
+  "portadas": [
+    {
+      "id": 1,
+      "nombre": "Portada de Inicio",
+      "titulo": "Transforma tus ideas en negocios digitales.",
+      "parrafo": "Acelera el desarrollo digital de tu empresa. Colabora con nosotros para construir productos increíbles que potencien tu negocio. Descubre cómo hemos ayudado a startups a asegurar finananciamiento y resolver los problemas más complejos.",
+      "texto_enlace": "Empezar",
+      "url_img": "../../public/Mockup WebSite UI desing.png"
+    }
+  ]
+}
