@@ -25,7 +25,7 @@
   z-index: 100 !important;
   backdrop-filter: blur($blur / 4);
   background: rgba(0, 0, 0, 0.5);
-
+  opacity: 0.5;
   .spinner {
     position: relative;
     width: 52.8px;

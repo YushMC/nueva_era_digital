@@ -9,21 +9,20 @@
       </p>
     </section>
     <div class="container_cards_horizontal">
-      <div
-        class="card_horizontal"
-        v-for="trabajo in trabajos"
-        :key="trabajo.id"
-      >
+      <div class="card_horizontal" v-for="work in works" :key="work.id">
         <div class="container_info">
           <div class="container_images">
             <Swiper
-              :effect="'cube'"
+              :effect="'coverflow'"
               :grabCursor="true"
-              :cubeEffect="{
-                shadow: true,
+              :centeredSlides="true"
+              :slidesPerView="'auto'"
+              :coverflowEffect="{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
                 slideShadows: true,
-                shadowOffset: 20,
-                shadowScale: 0.94,
               }"
               :pagination="true"
               :modules="[EffectCube, Navigation, Pagination]"
@@ -39,12 +38,12 @@
           </div>
 
           <div class="container_text">
-            <h3>{{ trabajo.name }}</h3>
+            <h3>{{ work.name }}</h3>
             <p>
-              {{ trabajo.descripcion }}
+              {{ work.desc }}
             </p>
             <div class="container_links">
-              <a :href="trabajo.enlace">Visitar</a>
+              <a :href="work.link">Visitar</a>
             </div>
           </div>
         </div>
@@ -54,6 +53,7 @@
 </template>
 
 <script setup>
+document.title = "Nuestro Trabajo - Nueva Era Digital";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -68,10 +68,10 @@ import "swiper/css/pagination";
 import { EffectCube, Navigation, Pagination } from "swiper/modules";
 
 // Importa directamente el archivo JSON
-import trabajosData from "@/json/trabajos.json";
+import worksData from "@/json/trabajos.json";
 
 // Usamos los datos directamente
-const trabajos = trabajosData.trabajos;
+const works = worksData.works;
 </script>
 
 <style lang="scss" scoped>

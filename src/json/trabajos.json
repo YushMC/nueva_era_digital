@@ -1,31 +1,31 @@
 {
-  "trabajos": [
+  "works": [
     {
       "id": 1,
       "name": "Orange",
-      "tipo": "Salud",
-      "descripcion": "hola xd",
-      "enlace": "#",
+      "type": "Salud",
+      "desc": "hola xd",
+      "link": "#",
       "url_logo": "",
-      "capturas": "#"
+      "screenshoots": "#"
     },
     {
       "id": 2,
       "name": "Orange",
       "tipo": "Viajes",
       "descripcion": "hola xd",
-      "enlace": "#",
+      "link": "#",
       "url_logo": "",
-      "capturas": "#"
+      "screenshoots": "#"
     },
     {
       "id": 3,
       "name": "Orange",
       "tipo": "Tecnología",
       "descripcion": "hola xd",
-      "enlace": "#",
+      "link": "#",
       "url_logo": "",
-      "capturas": "#"
+      "screenshoots": "#"
     }
   ]
 }

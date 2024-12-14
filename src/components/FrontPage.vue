@@ -7,11 +7,59 @@
         <a href="">{{ texto_boton_portada }}</a>
       </div>
     </div>
-    <div class="container_imgs">
+    <div class="container_imgs" v-if="!pagina_de_nosotros">
       <img :src="img_portada" alt="" />
       <div class="arriba" v-if="pagina_de_inicio">
         <img src="../../public/Mockup MobileSite UI design.png" alt="" />
       </div>
+    </div>
+    <div class="container_imgs_swiper" v-else>
+      <Swiper
+        :modules="[EffectCoverflow, Autoplay, Pagination]"
+        effect="coverflow"
+        :grabCursor="true"
+        :centeredSlides="true"
+        :loop="true"
+        :slidesPerView="3"
+        :coverflowEffect="{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :pagination="true"
+        class="mySwiper"
+      >
+        <swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-2.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-4.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-5.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-6.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img
+            src="https://swiperjs.com/demos/images/nature-7.jpg" /></swiper-slide
+        ><swiper-slide
+          ><img src="https://swiperjs.com/demos/images/nature-8.jpg"
+        /></swiper-slide>
+      </Swiper>
     </div>
   </div>
 </template>
@@ -25,6 +73,26 @@ const texto_boton_portada = ref("");
 const img_portada = ref("");
 const containerRef = ref(null); // Referencia al contenedor principal
 const pagina_de_inicio = ref(false);
+const pagina_de_nosotros = ref(false);
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+// Importa directamente el archivo JSON
+import frontPagesData from "@/json/portadas.json";
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import {
+  EffectCoverflow,
+  Autoplay,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 const props = defineProps({
   titulo_portada_frontpage: {
@@ -47,14 +115,25 @@ const props = defineProps({
     type: Boolean,
     required: true,
   },
+  pagina_nosotros: {
+    type: Boolean,
+    required: true,
+  },
 });
-
-titulo_portada.value = props.titulo_portada_frontpage;
-parrafo_portada.value = props.parrafo_front_page;
-texto_boton_portada.value = props.texto_boton_portada_front;
-img_portada.value = props.url_img_front_page;
-pagina_de_inicio.value = props.pagina_inicio;
-
+pagina_de_nosotros.value = props.pagina_nosotros;
+if (pagina_de_nosotros.value) {
+  // Usamos los datos directamente
+  const frontPage = frontPagesData.frontPages.find((t) => t.id === 6);
+  titulo_portada.value = frontPage.tittle;
+  parrafo_portada.value = frontPage.desc;
+  texto_boton_portada.value = frontPage.text_button;
+} else {
+  titulo_portada.value = props.titulo_portada_frontpage;
+  parrafo_portada.value = props.parrafo_front_page;
+  texto_boton_portada.value = props.texto_boton_portada_front;
+  img_portada.value = props.url_img_front_page;
+  pagina_de_inicio.value = props.pagina_inicio;
+}
 const handleMouseMove = (event) => {
   const container = containerRef.value;
   if (!container) return;
@@ -107,6 +186,7 @@ onUnmounted(() => {
   width: 100%;
   padding: 5% 10%;
   margin: auto;
+  user-select: none;
   @include contendor_doble_rejilla();
   background: $negro_transparente;
   background-attachment: fixed;
@@ -124,6 +204,7 @@ onUnmounted(() => {
   .container_imgs {
     width: 100%;
     @include centrar_elementos();
+
     img {
       width: 100%;
       filter: drop-shadow(1px 5px 5px #000000a9);
@@ -136,12 +217,34 @@ onUnmounted(() => {
       margin-right: -25%;
     }
   }
-
-  .container_buttons {
+  .container_imgs_swiper {
     width: 100%;
-    justify-content: start;
-    a {
-      padding: 1%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    .swiper {
+      width: 50rem;
+      height: 100%;
+      margin: auto;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    .container_buttons {
+      width: 100%;
+      justify-content: start;
+      a {
+        padding: 1%;
+      }
     }
   }
 

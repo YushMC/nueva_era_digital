@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Desarrollo Móvil",
+      "type": "Tecnología",
+      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
+      "url_icon": "/public/card_icons/MD.svg"
+    },
+    {
+      "id": 2,
+      "name": "Desarrollo Web",
+      "type": "Tecnología",
+      "desc": "hola",
+      "url_icon": "/public/card_icons/iconDeWb.svg"
+    },
+    {
+      "id": 3,
+      "name": "Branding",
+      "type": "Mercadotecnia",
+      "desc": "hola",
+      "url_icon": "/public/card_icons/BrandingIc.svg"
+    },
+    {
+      "id": 4,
+      "name": "Marketing Digital",
+      "type": "Mercadotecnia",
+      "desc": "hola",
+      "url_icon": "/public/card_icons/IconMarkD.svg"
+    }
+  ]
+}

@@ -26,12 +26,13 @@ a {
   text-wrap: nowrap;
 }
 .container_buttons {
-  @include centrar_elementos();
+  width: 100%;
+  @include contenedores_flexibles();
 
   a {
     color: #fff;
     background-color: $color_principal;
-    padding: 3% 7%;
+    padding: 2% 7%;
     border-radius: $border_radius;
     transition: all 0.3s linear;
   }

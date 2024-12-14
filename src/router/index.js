@@ -1,35 +1,48 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import Inicio from "../views/inicio.vue";
+import Movil from "../views/movil.vue";
+import Web from "../views/web.vue";
+import Branding from "../views/branding.vue";
+import Marketing from "../views/marketing.vue";
+import Works from "../views/works.vue";
+import AboutUs from "../views/aboutUs.vue";
+
 const routes = [
   {
     path: "/",
     name: "Inicio",
-    component: () => import("../views/inicio.vue"),
+    component: Inicio,
   },
   {
     path: "/movil",
     name: "Movil",
-    component: () => import("../views/movil.vue"),
+    component: Movil,
   },
   {
     path: "/web",
     name: "web",
-    component: () => import("../views/web.vue"),
+    component: Web,
   },
   {
     path: "/branding",
     name: "Branding",
-    component: () => import("../views/branding.vue"),
+    component: Branding,
   },
   {
     path: "/marketing",
     name: "Marketing",
-    component: () => import("../views/marketing.vue"),
+    component: Marketing,
   },
   {
     path: "/our-work",
     name: "Trabajos",
-    component: () => import("../views/works.vue"),
+    component: Works,
+  },
+  {
+    path: "/about-us",
+    name: "Sobre Nosotros",
+    component: AboutUs,
   },
 ];
 

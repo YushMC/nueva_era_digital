@@ -8,6 +8,10 @@
       </div>
       <nav>
         <div class="menu">
+          <router-link to="/">Inicio</router-link>
+          <hr />
+        </div>
+        <div class="menu">
           <a>Servicios ˅</a>
           <hr />
           <div class="sub_menu">
@@ -44,13 +48,13 @@
           <hr />
         </div>
         <div class="menu">
-          <a href="">Nosotros</a>
+          <router-link to="/about-us">Nosotros</router-link>
           <hr />
         </div>
-        <div class="menu">
+        <!--  <div class="menu">
           <a href="">Blog</a>
           <hr />
-        </div>
+        </div> -->
       </nav>
       <div class="container_buttons">
         <a href="">Contáctanos</a>
@@ -124,7 +128,7 @@ header {
           z-index: 100;
           background: $blanco_transparente;
           border-radius: $border_radius;
-          backdrop-filter: blur($blur);
+          backdrop-filter: blur($blur) !important;
           @include ocultar_elemento();
           @include columnas_flexibles();
           h5 {

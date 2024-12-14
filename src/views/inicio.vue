@@ -1,11 +1,12 @@
 <template>
   <div class="estructura">
     <FrontPage
-      :titulo_portada_frontpage="portadas.titulo"
-      :parrafo_front_page="portadas.parrafo"
-      :texto_boton_portada_front="portadas.texto_enlace"
-      :url_img_front_page="portadas.url_img"
-      pagina_inicio
+      :titulo_portada_frontpage="frontPage.tittle"
+      :parrafo_front_page="frontPage.desc"
+      :texto_boton_portada_front="frontPage.text_button"
+      :url_img_front_page="frontPage.url_img"
+      :pagina_inicio="true"
+      :pagina_nosotros="false"
     ></FrontPage>
     <section>
       <h5 class="subtitulos">Servicios</h5>
@@ -13,23 +14,10 @@
     </section>
     <div class="content_cards">
       <Card
-        titulo="Desarrollo Movil"
-        icono="../../public/card_icons/MD.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Desarrollo Web"
-        icono="../../public/card_icons/iconDeWb.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Branding"
-        icono="../../public/card_icons/BrandingIc.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Marketing Digital"
-        icono="../../public/card_icons/IconMarkD.svg"
+        v-for="service in services"
+        :key="service.id"
+        :titulo="service.name"
+        :icono="service.url_icon"
         parrafo="hola a todos"
       ></Card>
     </div>
@@ -111,15 +99,22 @@
 </template>
 
 <script setup>
+document.title = "Inicio - Nueva Era Digital";
 import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
 
 // Importa directamente el archivo JSON
-import portadasData from "@/json/portadas.json";
+import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
-const portadas = portadasData.portadas.find((t) => t.id === 1);
+const frontPage = frontPagesData.frontPages.find((t) => t.id === 1);
+
+// Importa directamente el archivo JSON
+import servicesData from "@/json/servicios.json";
+
+// Usamos los datos directamente
+const services = servicesData.services;
 </script>
 
 <style lang="scss" scoped></style>
