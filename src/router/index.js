@@ -7,6 +7,7 @@ import Branding from "../views/branding.vue";
 import Marketing from "../views/marketing.vue";
 import Works from "../views/works.vue";
 import AboutUs from "../views/aboutUs.vue";
+import Contact from "../views/contact.vue";
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: "/about-us",
     name: "Sobre Nosotros",
     component: AboutUs,
+  },
+  {
+    path: "/contact",
+    name: "Contacto",
+    component: Contact,
   },
 ];
 

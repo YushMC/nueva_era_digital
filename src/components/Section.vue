@@ -59,7 +59,7 @@ parrafo_seccion.value = props.parrafo_section;
   .content_text {
     width: 48%;
     @include columnas_flexibles_izquierda();
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       width: 100%;
       margin: 4% 0;
     }
@@ -68,17 +68,18 @@ parrafo_seccion.value = props.parrafo_section;
     width: 48%;
     @include centrar_elementos();
     img {
-      aspect-ratio: 9/16;
-      object-fit: cover;
-      width: 300px;
+      width: 100%;
       border-radius: $border_radius_img;
+      aspect-ratio: 16/9;
+      object-fit: contain;
+      object-position: center;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       width: 100%;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column !important;
   }
 

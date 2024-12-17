@@ -43,11 +43,14 @@ img_carta.value = props.icono;
 
 .card {
   width: 100%;
+  height: 350px;
   border-radius: $border_radius;
   background: $negro_transparente;
   padding: 2%;
   transition: all 0.2s linear;
-  @include columnas_flexibles_izquierda();
+  display: grid;
+  grid-template-rows: 2fr 1fr 3fr;
+  align-items: center;
 
   .content_icon {
     width: 100%;
@@ -62,7 +65,10 @@ img_carta.value = props.icono;
     color: $color_principal;
     font-size: 1.5rem;
   }
-
+  p {
+    line-height: 1.5;
+    text-align: justify;
+  }
   &:hover {
     transform: translateX(12px) translateY(-12px);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);

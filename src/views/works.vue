@@ -152,14 +152,14 @@ section {
           top: 10px;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 800px) {
           overflow: hidden;
           height: 100%;
           margin-top: 5%;
         }
       }
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 800px) {
         padding: 5%;
         height: 100%;
         display: flex;
@@ -181,13 +181,13 @@ section {
       }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       display: flex;
       flex-direction: column;
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     @include columnas_flexibles();
   }
 }

@@ -63,6 +63,15 @@
         visibility: visible;
       }
     }
+
+    @media screen and (max-width: 800px) {
+      padding: 50% 58%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    bottom: 8%;
+    right: 8%;
   }
 }
 </style>

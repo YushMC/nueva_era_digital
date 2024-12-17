@@ -4,25 +4,30 @@
       "id": 1,
       "name": "Portada de Inicio",
       "tittle": "Transforma tus ideas en negocios digitales.",
-      "desc": "Acelera el desarrollo digital de tu empresa. Colabora con nosotros para construir productos increíbles que potencien tu negocio. Descubre cómo hemos ayudado a startups a asegurar finananciamiento y resolver los problemas más complejos.",
+      "desc": "Impulsamos tu crecimiento digital con soluciones tecnológicas integrales. Somos expertos en desarrollo web, software a medida, posicionamiento web (SEO) y otros servicios diseñados para optimizar tu negocio en el mundo digital. Nuestro enfoque combina innovación, creatividad y tecnología para ofrecer resultados efectivos que transforman tus ideas en realidad.",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup WebSite UI desing.png"
+      "url_img": "../../public/Mockup WebSite UI desing.png",
+      "url_boton": "#servicios"
     },
     {
       "id": 2,
       "name": "Portada de Desarrollo Web",
       "tittle": "No inventamos la web, solamente la mejoramos. Desarrollo web que funciona.",
+      "subtittle": "Desarrollo Web",
       "desc": "",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup WebSite UI desing.png"
+      "url_img": "../../public/Mockup WebSite UI desing.png",
+      "url_boton": "#"
     },
     {
       "id": 3,
       "name": "Portada de Desarrollo Movil",
-      "tittle": "Lleva tu negocio a tus clientes, en donde sea que estén.",
-      "desc": "95% de las personas cuentan con un teléfono móvil. Utilizar el poder de los celulares al día de hoy ya no es un lujo, es una necesidad para cualquier negocio. Redefine el éxito de tu negocio con nuestros servicios de desarrollo de aplicaciones móviles a la medida. ¿Listo para transformar tu visión en una app impresionante? Estamos a solo un click de distancia",
+      "tittle": "¡Haz que tu marca destaque sobre la competencia!",
+      "subtittle": "Desarrollo móvil",
+      "desc": "Transformamos tus ideas en aplicaciones móviles innovadoras, adaptadas a las necesidades de tu negocio. Creamos experiencias intuitivas y funcionales que conectan a tus usuarios con tu marca en cualquier lugar y momento.",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup MobileSite UI design.png"
+      "url_img": "../../public/Mockup MobileSite UI design.png",
+      "url_boton": "#"
     },
     {
       "id": 4,
@@ -30,7 +35,8 @@
       "tittle": "Branding",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/BrandingIc.svg"
+      "url_img": "../../public/card_icons/BrandingIc.svg",
+      "url_boton": "#"
     },
     {
       "id": 5,
@@ -38,7 +44,8 @@
       "tittle": "Marketing",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/IconMarkD.svg"
+      "url_img": "../../public/card_icons/IconMarkD.svg",
+      "url_boton": "#"
     },
     {
       "id": 6,
@@ -46,7 +53,8 @@
       "tittle": "Llevamos tus ideas a productos reales y exitosos",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/IconMarkD.svg"
+      "url_img": "../../public/card_icons/IconMarkD.svg",
+      "url_boton": "#"
     }
   ]
 }

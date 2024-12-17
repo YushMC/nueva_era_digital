@@ -4,7 +4,7 @@
       <h1>{{ titulo_portada }}</h1>
       <p>{{ parrafo_portada }}</p>
       <div class="container_buttons">
-        <a href="">{{ texto_boton_portada }}</a>
+        <a :href="url_boton_portada">{{ texto_boton_portada }}</a>
       </div>
     </div>
     <div class="container_imgs" v-if="!pagina_de_nosotros">
@@ -70,6 +70,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 const titulo_portada = ref("");
 const parrafo_portada = ref("");
 const texto_boton_portada = ref("");
+const url_boton_portada = ref("");
 const img_portada = ref("");
 const containerRef = ref(null); // Referencia al contenedor principal
 const pagina_de_inicio = ref(false);
@@ -111,6 +112,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  url_boton_portada_id: {
+    type: String,
+    required: true,
+  },
   pagina_inicio: {
     type: Boolean,
     required: true,
@@ -127,12 +132,14 @@ if (pagina_de_nosotros.value) {
   titulo_portada.value = frontPage.tittle;
   parrafo_portada.value = frontPage.desc;
   texto_boton_portada.value = frontPage.text_button;
+  url_boton_portada.value = frontPage.url_boton;
 } else {
   titulo_portada.value = props.titulo_portada_frontpage;
   parrafo_portada.value = props.parrafo_front_page;
   texto_boton_portada.value = props.texto_boton_portada_front;
   img_portada.value = props.url_img_front_page;
   pagina_de_inicio.value = props.pagina_inicio;
+  url_boton_portada.value = props.url_boton_portada_id;
 }
 const handleMouseMove = (event) => {
   const container = containerRef.value;
@@ -238,6 +245,11 @@ onUnmounted(() => {
           width: 100%;
         }
       }
+
+      @media screen and (max-width: 800px) {
+        width: 40rem;
+        margin-left: -40%;
+      }
     }
     .container_buttons {
       width: 100%;
@@ -248,8 +260,10 @@ onUnmounted(() => {
     }
   }
 
-  @media screen and (max-width: 600px) {
-    padding: 30% 10%;
+  @media screen and (max-width: 800px) {
+    padding-top: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
     @include columnas_flexibles_izquierda();
   }
 }

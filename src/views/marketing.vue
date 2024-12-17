@@ -5,6 +5,7 @@
       :parrafo_front_page="frontPage.desc"
       :texto_boton_portada_front="frontPage.text_button"
       :url_img_front_page="frontPage.url_img"
+      :url_boton_portada_id="frontPage.url_boton"
       :pagina_inicio="false"
       :pagina_nosotros="false"
     ></FrontPage>

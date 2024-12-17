@@ -1,0 +1,66 @@
+{
+  "home": [
+    {
+      "id": 1,
+      "tittle": "HOLA",
+      "subtittle": "esto es un subtitulo",
+      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
+      "url_img": "/public/card_icons/MD.svg"
+    },
+    {
+      "id": 2,
+      "tittle": "HOLA",
+      "subtittle": "esto es un subtitulo",
+      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
+      "url_img": "/public/card_icons/MD.svg"
+    }
+  ],
+  "aboutUs": [
+    {
+      "id": 1,
+      "tittle": "¿Quienes Somos?",
+      "subtittle": "Sobre Nosotros",
+      "desc": "Somos una empresa de tecnología innovadora especializada en la creación de soluciones digitales a medida para negocios de todos los tamaños. Con un equipo de expertos en desarrollo web, aplicaciones móviles, aplicaciones de escritorio, branding y manejo de redes sociales, nos dedicamos a transformar ideas en experiencias digitales únicas.",
+      "url_img": "/public/Logo.v4.3(horizontalblack)v.2.0.png"
+    },
+    {
+      "id": 2,
+      "tittle": "Misión",
+      "subtittle": "Sobre Nosotros",
+      "desc": "Nuestra misión es ayudarte a aprovechar al máximo las herramientas digitales, creando soluciones personalizadas que impulsen tu negocio y mejoren la experiencia de tus usuarios. Con un enfoque en la calidad, la innovación y el compromiso, nos aseguramos de que cada proyecto se entregue con la más alta excelencia y en los plazos establecidos. ¡Déjanos llevar tu presencia digital al siguiente nivel!",
+      "url_img": "https://nuevaeradigital.mx/wp-content/uploads/2024/11/pexels-oandremoura-4903384-1536x2048.jpg"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "tittle": "Innovación",
+      "desc": " Adoptamos nuevas tecnologías para ofrecer soluciones actualizadas y creativas a nuestros clientes.",
+      "url_icon": "/public/card_icons/Innoavicion.svg"
+    },
+    {
+      "id": 2,
+      "tittle": "Compromiso",
+      "desc": "Nos esforzamos por entregar resultados que superen las expectativas.",
+      "url_icon": "/public/card_icons/Compromiso.svg"
+    },
+    {
+      "id": 3,
+      "tittle": "Calidad",
+      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
+      "url_icon": "/public/card_icons/calidad.svg"
+    },
+    {
+      "id": 4,
+      "tittle": "Adaptabilidad",
+      "desc": "Nos ajustamos a las necesidades específicas de cada proyecto, ofreciendo soluciones únicas y efectivas.",
+      "url_icon": "/public/card_icons/adaptabilidad.svg"
+    },
+    {
+      "id": 5,
+      "tittle": "Confianza",
+      "desc": "Creemos en relaciones honestas y transparentes con nuestros clientes y colaboradores.",
+      "url_icon": "/public/card_icons/confianza.svg"
+    }
+  ]
+}

@@ -5,10 +5,11 @@
       :parrafo_front_page="frontPage.desc"
       :texto_boton_portada_front="frontPage.text_button"
       :url_img_front_page="frontPage.url_img"
+      :url_boton_portada_id="frontPage.url_boton"
       :pagina_inicio="true"
       :pagina_nosotros="false"
     ></FrontPage>
-    <section>
+    <section id="servicios">
       <h5 class="subtitulos">Servicios</h5>
       <h3 class="titulos">Lo que ofrecemos</h3>
     </section>
@@ -18,26 +19,16 @@
         :key="service.id"
         :titulo="service.name"
         :icono="service.url_icon"
-        parrafo="hola a todos"
+        :parrafo="service.desc"
       ></Card>
     </div>
     <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
+      v-for="infoCards in cards"
+      :key="infoCards.id"
+      :titulo_section="infoCards.tittle"
+      :subtitulo_section="infoCards.subtittle"
+      :parrafo_section="infoCards.desc"
+      :url_img="infoCards.url_img"
     ></Section>
 
     <section class="works">
@@ -115,6 +106,12 @@ import servicesData from "@/json/servicios.json";
 
 // Usamos los datos directamente
 const services = servicesData.services;
+
+// Importa directamente el archivo JSON
+import cardsData from "@/json/infoCartas.json";
+
+// Usamos los datos directamente
+const cards = cardsData.home;
 </script>
 
 <style lang="scss" scoped></style>

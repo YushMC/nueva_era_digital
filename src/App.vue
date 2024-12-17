@@ -1,11 +1,15 @@
 <script setup>
+import { computed } from "vue";
 import BotonFlotante from "./components/botonFlotante.vue";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
+import { useRoute } from "vue-router";
 
-// componente de carga y
+// Accede a la información de la ruta actual
+const route = useRoute();
 
-// import Load from "./components/load.vue";
+// Detecta si estás en la ruta específica
+const isContactPage = computed(() => route.path === "/contact");
 </script>
 
 <template>
@@ -17,16 +21,18 @@ import Header from "./components/Header.vue";
       </transition>
     </router-view>
     <BotonFlotante></BotonFlotante>
-    <section class="action_div">
+
+    <section class="action_div" v-if="!isContactPage">
       <h5>Contáctanos</h5>
       <h3>¿Estás listo para tu siguiente proyecto?</h3>
       <div class="text_action_div">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-          quasi.
+          ¡Estamos aquí para ayudarte! Contáctanos y juntos impulsaremos el
+          crecimiento de tu negocio con nuestras soluciones tecnológicas
+          innovadoras..
         </p>
         <div class="container_buttons">
-          <a href="">Boton</a>
+          <router-link to="/contact">Contactar</router-link>
         </div>
       </div>
     </section>
@@ -39,7 +45,7 @@ import Header from "./components/Header.vue";
 .blur {
   &-enter-active,
   &-leave-active {
-    transition: opacity 0.5s, filter 0.5s;
+    transition: opacity 0.3s, filter 0.3s;
   }
 
   &-enter-from,
@@ -56,5 +62,6 @@ import Header from "./components/Header.vue";
 }
 .container_router_view {
   position: relative;
+  user-select: none;
 }
 </style>

@@ -41,7 +41,7 @@
         <ul>
           <li><router-link to="/web">Desarrollo Web</router-link></li>
           <li><router-link to="/movil">Desarrollo Móvil</router-link></li>
-          <li><router-link to="/brandig">Branding</router-link></li>
+          <li><router-link to="/branding">Branding</router-link></li>
           <li><router-link to="/marketing">Marketing</router-link></li>
         </ul>
       </div>
@@ -68,6 +68,7 @@ footer {
   width: 100%;
   position: relative;
   @include columnas_flexibles();
+  padding-top: 1%;
   .container_footer {
     width: 80%;
     margin: auto;
@@ -142,7 +143,7 @@ footer {
       }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       @include columnas_flexibles_izquierda();
       padding-bottom: 10%;
     }
@@ -163,7 +164,7 @@ footer {
       text-transform: uppercase;
       font-size: 1rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 800px) {
         font-size: 0.5rem;
       }
     }
