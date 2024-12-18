@@ -5,14 +5,14 @@
       "tittle": "HOLA",
       "subtittle": "esto es un subtitulo",
       "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
-      "url_img": "/public/card_icons/MD.svg"
+      "url_img": "/card_icons/MD.svg"
     },
     {
       "id": 2,
       "tittle": "HOLA",
       "subtittle": "esto es un subtitulo",
       "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
-      "url_img": "/public/card_icons/MD.svg"
+      "url_img": "/card_icons/MD.svg"
     }
   ],
   "aboutUs": [
@@ -21,7 +21,7 @@
       "tittle": "¿Quienes Somos?",
       "subtittle": "Sobre Nosotros",
       "desc": "Somos una empresa de tecnología innovadora especializada en la creación de soluciones digitales a medida para negocios de todos los tamaños. Con un equipo de expertos en desarrollo web, aplicaciones móviles, aplicaciones de escritorio, branding y manejo de redes sociales, nos dedicamos a transformar ideas en experiencias digitales únicas.",
-      "url_img": "/public/Logo.v4.3(horizontalblack)v.2.0.png"
+      "url_img": "/Logo.v4.3(horizontalblack)v.2.0.png"
     },
     {
       "id": 2,
@@ -36,31 +36,31 @@
       "id": 1,
       "tittle": "Innovación",
       "desc": " Adoptamos nuevas tecnologías para ofrecer soluciones actualizadas y creativas a nuestros clientes.",
-      "url_icon": "/public/card_icons/Innoavicion.svg"
+      "url_icon": "/card_icons/Innoavicion.svg"
     },
     {
       "id": 2,
       "tittle": "Compromiso",
       "desc": "Nos esforzamos por entregar resultados que superen las expectativas.",
-      "url_icon": "/public/card_icons/Compromiso.svg"
+      "url_icon": "/card_icons/Compromiso.svg"
     },
     {
       "id": 3,
       "tittle": "Calidad",
       "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
-      "url_icon": "/public/card_icons/calidad.svg"
+      "url_icon": "/card_icons/calidad.svg"
     },
     {
       "id": 4,
       "tittle": "Adaptabilidad",
       "desc": "Nos ajustamos a las necesidades específicas de cada proyecto, ofreciendo soluciones únicas y efectivas.",
-      "url_icon": "/public/card_icons/adaptabilidad.svg"
+      "url_icon": "/card_icons/adaptabilidad.svg"
     },
     {
       "id": 5,
       "tittle": "Confianza",
       "desc": "Creemos en relaciones honestas y transparentes con nuestros clientes y colaboradores.",
-      "url_icon": "/public/card_icons/confianza.svg"
+      "url_icon": "/card_icons/confianza.svg"
     }
   ]
 }
