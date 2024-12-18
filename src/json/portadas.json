@@ -6,7 +6,7 @@
       "tittle": "Transforma tus ideas en negocios digitales.",
       "desc": "Impulsamos tu crecimiento digital con soluciones tecnológicas integrales. Somos expertos en desarrollo web, software a medida, posicionamiento web (SEO) y otros servicios diseñados para optimizar tu negocio en el mundo digital. Nuestro enfoque combina innovación, creatividad y tecnología para ofrecer resultados efectivos que transforman tus ideas en realidad.",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup WebSite UI desing.png",
+      "url_img": "/Mockup WebSite UI desing.png",
       "url_boton": "#servicios"
     },
     {
@@ -16,7 +16,7 @@
       "subtittle": "Desarrollo Web",
       "desc": "",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup WebSite UI desing.png",
+      "url_img": "/Mockup WebSite UI desing.png",
       "url_boton": "#"
     },
     {
@@ -26,7 +26,7 @@
       "subtittle": "Desarrollo móvil",
       "desc": "Transformamos tus ideas en aplicaciones móviles innovadoras, adaptadas a las necesidades de tu negocio. Creamos experiencias intuitivas y funcionales que conectan a tus usuarios con tu marca en cualquier lugar y momento.",
       "text_button": "Empezar",
-      "url_img": "../../public/Mockup MobileSite UI design.png",
+      "url_img": "/Mockup MobileSite UI design.png",
       "url_boton": "#"
     },
     {
@@ -35,7 +35,7 @@
       "tittle": "Branding",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/BrandingIc.svg",
+      "url_img": "/card_icons/BrandingIc.svg",
       "url_boton": "#"
     },
     {
@@ -44,7 +44,7 @@
       "tittle": "Marketing",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/IconMarkD.svg",
+      "url_img": "/card_icons/IconMarkD.svg",
       "url_boton": "#"
     },
     {
@@ -53,7 +53,7 @@
       "tittle": "Llevamos tus ideas a productos reales y exitosos",
       "desc": "esto es un desc",
       "text_button": "Empezar",
-      "url_img": "../../public/card_icons/IconMarkD.svg",
+      "url_img": "/card_icons/IconMarkD.svg",
       "url_boton": "#"
     }
   ]

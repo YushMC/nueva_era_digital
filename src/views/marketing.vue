@@ -14,19 +14,19 @@
       titulo_section="HOLA"
       subtitulo_section="esto es un subtitulo"
       parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
+      url_img="/prueba.jpeg"
     ></Section>
     <Section
       titulo_section="HOLA"
       subtitulo_section="esto es un subtitulo"
       parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
+      url_img="/prueba.jpeg"
     ></Section>
     <Section
       titulo_section="HOLA"
       subtitulo_section="esto es un subtitulo"
       parrafo_section="Esto es un parrafo"
-      url_img="../../public/prueba.jpeg"
+      url_img="/prueba.jpeg"
     ></Section>
   </div>
 </template>

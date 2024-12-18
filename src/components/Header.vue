@@ -3,12 +3,12 @@
     <div class="container_header">
       <div class="container_logo">
         <router-link to="/"
-          ><img src="./../../public/logo_header.png" alt=""
+          ><img src=".//logo_header.png" alt=""
         /></router-link>
       </div>
       <nav :class="{ mostrar_menu: isOpen }">
         <div class="content_logo_menu">
-          <img src="./../../public/logo_header.png" alt="" />
+          <img src=".//logo_header.png" alt="" />
         </div>
         <div class="menu">
           <router-link to="/">Inicio</router-link>
@@ -32,16 +32,16 @@
             </div>
             <h5>Tecnologías</h5>
             <div class="tecnologias">
-              <img src="../../public/icons/html.svg" alt="" />
-              <img src="../../public/icons/js.svg" alt="" />
-              <img src="../../public/icons/angular.svg" alt="" />
-              <img src="../../public/icons/vue.svg" alt="" />
-              <img src="../../public/icons/laravel.svg" alt="" />
-              <img src="../../public/icons/flutter.svg" alt="" />
-              <img src="../../public/icons/react.svg" alt="" />
-              <img src="../../public/icons/python.svg" alt="" />
-              <img src="../../public/icons/wordpress.svg" alt="" />
-              <img src="../../public/icons/inkscape.svg" alt="" />
+              <img src="/icons/html.svg" alt="" />
+              <img src="/icons/js.svg" alt="" />
+              <img src="/icons/angular.svg" alt="" />
+              <img src="/icons/vue.svg" alt="" />
+              <img src="/icons/laravel.svg" alt="" />
+              <img src="/icons/flutter.svg" alt="" />
+              <img src="/icons/react.svg" alt="" />
+              <img src="/icons/python.svg" alt="" />
+              <img src="/icons/wordpress.svg" alt="" />
+              <img src="/icons/inkscape.svg" alt="" />
             </div>
           </div>
         </div>

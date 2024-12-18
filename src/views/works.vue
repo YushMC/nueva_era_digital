@@ -29,10 +29,10 @@
               class="mySwiper"
             >
               <SwiperSlide>
-                <img src="../../public/prueba.jpeg" alt="" />
+                <img src="/prueba.jpeg" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="../../public/prueba.jpeg" alt="" />
+                <img src="/prueba.jpeg" alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -89,7 +89,7 @@ section {
 
   .card_horizontal {
     width: 100%;
-    background-image: url("../../public/prueba.jpeg");
+    background-image: url("/prueba.jpeg");
     background-position: center;
     background-size: cover;
     height: 400px;

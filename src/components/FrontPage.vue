@@ -10,7 +10,7 @@
     <div class="container_imgs" v-if="!pagina_de_nosotros">
       <img :src="img_portada" alt="" />
       <div class="arriba" v-if="pagina_de_inicio">
-        <img src="../../public/Mockup MobileSite UI design.png" alt="" />
+        <img src="/Mockup MobileSite UI design.png" alt="" />
       </div>
     </div>
     <div class="container_imgs_swiper" v-else>

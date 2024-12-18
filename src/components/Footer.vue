@@ -3,7 +3,7 @@
     <div class="container_footer">
       <div class="container_info">
         <div class="content_logo">
-          <img src="../../public/Logo(white)v.2.0.png" alt="" />
+          <img src="/Logo(white)v.2.0.png" alt="" />
         </div>
         <hr />
         <div class="container_contacto">

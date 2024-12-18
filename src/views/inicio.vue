@@ -76,12 +76,12 @@
     <div class="content_cards">
       <Card
         titulo="Desarrollo Movil"
-        icono="../../public/prueba.jpeg"
+        icono="/prueba.jpeg"
         parrafo="hola a todos"
       ></Card>
       <Card
         titulo="Desarrollo Web"
-        icono=".../../public/prueba.jpeg"
+        icono="./prueba.jpeg"
         parrafo="hola a todos"
       ></Card>
     </div>
