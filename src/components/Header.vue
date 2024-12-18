@@ -7,6 +7,9 @@
         /></router-link>
       </div>
       <nav :class="{ mostrar_menu: isOpen }">
+        <div class="content_logo_menu">
+          <img src="./../../public/logo_header.png" alt="" />
+        </div>
         <div class="menu">
           <router-link to="/">Inicio</router-link>
           <hr />
@@ -123,14 +126,19 @@ header {
       @include contenedores_flexibles();
 
       img {
-        width: 60%;
+        width: 300px;
+      }
+      @media screen and (max-width: 900px) {
+        img {
+          width: 200px;
+        }
       }
     }
     //enlaces o navegacion
     nav {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 3rem;
       .menu {
         width: 100%;
@@ -144,7 +152,7 @@ header {
           width: 100%;
           color: $color_principal;
 
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 900px) {
             text-align: left;
             margin: 4% 0;
           }
@@ -167,7 +175,7 @@ header {
             text-transform: uppercase;
             letter-spacing: 0.1rem;
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 900px) {
               text-align: center;
             }
           }
@@ -198,11 +206,11 @@ header {
                   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
                   transform: scale(1.01);
                 }
-                @media screen and (max-width: 800px) {
+                @media screen and (max-width: 900px) {
                   width: 100%;
                 }
               }
-              @media screen and (max-width: 800px) {
+              @media screen and (max-width: 900px) {
                 width: 100%;
                 height: min-content !important;
                 z-index: 100;
@@ -220,7 +228,7 @@ header {
               }
             }
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 900px) {
               width: 100%;
               @include columnas_flexibles_izquierda();
               margin: 0;
@@ -240,12 +248,12 @@ header {
               width: 20px;
               opacity: 0.6;
             }
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: 900px) {
               flex-wrap: wrap;
             }
           }
 
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 900px) {
             display: none;
             position: relative;
             top: 0%;
@@ -258,7 +266,7 @@ header {
           @include mostrar_elemento();
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 900px) {
             display: block;
             transition: all 0.3s linear;
           }
@@ -266,18 +274,18 @@ header {
         &:hover hr {
           width: 100%;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
           gap: 0;
           padding: 2%;
         }
       }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 900px) {
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: start;
         position: fixed;
-        height: 100dvh;
+        height: 120dvh;
         top: 0%;
         left: 0;
         width: 70%;
@@ -287,7 +295,7 @@ header {
         box-shadow: 0px 30px 40px 10px rgba(0, 0, 0, 0.774) !important;
         overflow: auto;
         transition: all 0.5s linear;
-        transform: translateX(-600px);
+        transform: translateX(-650px);
         &.mostrar_menu {
           transform: translateX(0px);
         }
@@ -306,17 +314,21 @@ header {
         z-index: 90;
         gap: 0rem;
       }
+
+      .container_buttons a {
+        padding: 10%;
+      }
     }
 
     //botones de contacto
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       position: initial;
 
       @include contenedores_flexibles();
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -355,7 +367,7 @@ header {
     }
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 901px) {
     display: none;
   }
 }
@@ -368,12 +380,26 @@ header {
   height: 100dvh;
   z-index: 50 !important;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 901px) {
     display: none;
   }
 
   &.activar_desactivador {
     display: block;
+  }
+}
+
+.content_logo_menu {
+  width: 100%;
+  @include columnas_flexibles();
+  padding: 5%;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 901px) {
+    display: none;
   }
 }
 </style>

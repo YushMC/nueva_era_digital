@@ -28,32 +28,6 @@
       parrafo_section="Esto es un parrafo"
       url_img="../../public/prueba.jpeg"
     ></Section>
-    <section>
-      <h5 class="subtitulos">Servicios</h5>
-      <h3 class="titulos">Lo que ofrecemos</h3>
-    </section>
-    <div class="content_cards">
-      <Card
-        titulo="Desarrollo Movil"
-        icono="../../public/card_icons/MD.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Desarrollo Web"
-        icono="../../public/card_icons/iconDeWb.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Branding"
-        icono="../../public/card_icons/BrandingIc.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Desarrollo Movil"
-        icono="../../public/card_icons/MD.svg"
-        parrafo="hola a todos"
-      ></Card>
-    </div>
   </div>
 </template>
 

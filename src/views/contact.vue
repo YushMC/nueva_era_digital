@@ -286,12 +286,18 @@ const validateForm = () => {
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     @include columnas_flexibles();
     padding-top: 20%;
 
     textarea {
-      margin-top: 8% !important;
+      margin-top: 5% !important;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    textarea {
+      margin-top: 9% !important;
     }
   }
 }

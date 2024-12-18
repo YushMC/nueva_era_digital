@@ -246,7 +246,7 @@ onUnmounted(() => {
         }
       }
 
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 900px) {
         width: 40rem;
         margin-left: -40%;
       }
@@ -260,7 +260,7 @@ onUnmounted(() => {
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     padding-top: 30%;
     padding-left: 10%;
     padding-right: 10%;

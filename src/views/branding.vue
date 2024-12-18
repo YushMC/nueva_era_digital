@@ -28,45 +28,6 @@
       parrafo_section="Esto es un parrafo"
       url_img="../../public/prueba.jpeg"
     ></Section>
-    <section>
-      <h5 class="subtitulos">Servicios</h5>
-      <h3 class="titulos">Lo que ofrecemos</h3>
-    </section>
-    <div class="content_cards">
-      <Card
-        titulo="Desarrollo Movil"
-        icono="../../public/card_icons/MD.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Desarrollo Web"
-        icono="../../public/card_icons/iconDeWb.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Branding"
-        icono="../../public/card_icons/BrandingIc.svg"
-        parrafo="hola a todos"
-      ></Card>
-      <Card
-        titulo="Desarrollo Movil"
-        icono="../../public/card_icons/MD.svg"
-        parrafo="hola a todos"
-      ></Card>
-    </div>
-    <section class="action_div">
-      <h5>Contáctanos</h5>
-      <h3>¿Estás listo para tu siguiente proyecto?</h3>
-      <div class="text_action_div">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque,
-          quasi.
-        </p>
-        <div class="container_buttons">
-          <a href="">Boton</a>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 

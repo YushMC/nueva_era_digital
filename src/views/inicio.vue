@@ -39,7 +39,7 @@
         de la vida diaria
       </p>
       <div class="container_buttons">
-        <a href="">Trabajos recientes</a>
+        <router-link to="/our-work">Trabajos recientes</router-link>
       </div>
 
       <div class="container_cards_works">

@@ -64,12 +64,12 @@
       }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       padding: 50% 58%;
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     bottom: 8%;
     right: 8%;
   }

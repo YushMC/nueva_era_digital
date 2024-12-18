@@ -73,5 +73,8 @@ img_carta.value = props.icono;
     transform: translateX(12px) translateY(-12px);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   }
+  @media screen and (max-width: 600px) {
+    height: 400px;
+  }
 }
 </style>

@@ -56,10 +56,11 @@ parrafo_seccion.value = props.parrafo_section;
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  padding: 2%;
   .content_text {
     width: 48%;
     @include columnas_flexibles_izquierda();
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       width: 100%;
       margin: 4% 0;
     }
@@ -68,23 +69,32 @@ parrafo_seccion.value = props.parrafo_section;
     width: 48%;
     @include centrar_elementos();
     img {
-      width: 100%;
+      width: 50%;
       border-radius: $border_radius_img;
       aspect-ratio: 16/9;
       object-fit: contain;
       object-position: center;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       width: 100%;
+      padding: 0;
+      img {
+        width: 100%;
+      }
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     flex-direction: column !important;
   }
 
-  &:nth-child(2n) {
+  &:nth-child(2n + 1) {
     flex-direction: row-reverse !important;
+    background: $negro_transparente;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column !important;
+    }
   }
 }
 </style>

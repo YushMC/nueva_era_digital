@@ -3,8 +3,9 @@
     <div class="container_footer">
       <div class="container_info">
         <div class="content_logo">
-          <img src="../../public/logo_header.png" alt="" />
+          <img src="../../public/Logo(white)v.2.0.png" alt="" />
         </div>
+        <hr />
         <div class="container_contacto">
           <div>
             <h5>Contacto</h5>
@@ -32,8 +33,8 @@
         <h5>Nosotros</h5>
         <ul>
           <li>Politica de Privacidad</li>
-          <li>...</li>
-          <li>...</li>
+          <li>Terminos y condiciones</li>
+          <li>EULA</li>
         </ul>
       </div>
       <div class="container_info">
@@ -65,10 +66,13 @@ const footerInfo = footerData.footer.find((t) => t.id === 1);
 @use "@/styles/_prefabs.scss" as *;
 
 footer {
+  user-select: none;
   width: 100%;
   position: relative;
   @include columnas_flexibles();
+  background: $color_principal;
   padding-top: 1%;
+  text-wrap: nowrap;
   .container_footer {
     width: 80%;
     margin: auto;
@@ -80,21 +84,40 @@ footer {
       display: flex;
       flex-direction: column;
       h5 {
-        color: $color_principal;
+        color: $color_secundario;
         text-transform: uppercase;
         font-size: 1rem;
         margin-bottom: 2%;
+        opacity: 0.7;
+        transition: all 0.3s linear;
+
+        &:hover {
+          filter: drop-shadow(5px -3px 10px #ffffff94);
+        }
       }
 
       .container_contacto {
         width: 100%;
+        margin-top: 3%;
         @include contendor_doble_rejilla();
         div {
           display: flex;
           flex-direction: column;
           li {
+            color: #fff;
             width: 100%;
           }
+        }
+      }
+      @media screen and (max-width: 900px) {
+        width: 100%;
+
+        li {
+          width: 100%;
+        }
+
+        &:last-child {
+          display: none;
         }
       }
     }
@@ -104,7 +127,17 @@ footer {
       img {
         width: 100%;
       }
+
+      &:hover + hr {
+        box-shadow: 0px -10px 60px 8px rgba(253, 253, 253, 0.192);
+        width: 100%;
+      }
     }
+    hr {
+      width: 0%;
+      transition: all 0.5s linear;
+    }
+
     ul {
       width: 100%;
       display: flex;
@@ -114,41 +147,37 @@ footer {
         width: 50%;
         margin: 2% 0;
         transition: all 0.3s linear;
-        padding: 2%;
-        a {
-          display: flex;
-          width: 100%;
-          color: #4e4d4d;
-          padding: 2%;
-          transition: all 0.3s linear;
-          background-size: 0%;
-          &:hover {
-            // transform-origin: bottom left;
-            color: #ffffff;
-          }
-        }
+        color: #fff;
+
+        padding: 3%;
+
         &:hover {
-          transform: skewY(-1deg) scale(1.1) translateX(20px);
-          color: #fff;
+          transform: skewY(-0.5deg) scale(1) translateX(10px);
+          color: #000 !important;
           cursor: pointer;
           background: linear-gradient(
             162deg,
-            rgba(20, 30, 79, 1) 54%,
-            rgba(20, 30, 79, 0.4009804605435925) 100%
+            rgb(250, 250, 250) 54%,
+            rgba(73, 73, 73, 0.401) 100%
           );
           background-repeat: no-repeat;
           border-radius: $border_radius;
           background-size: 100%;
+          a {
+            color: #000;
+          }
         }
       }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       @include columnas_flexibles_izquierda();
+      gap: 1rem;
       padding-bottom: 10%;
     }
   }
   .container_copyright {
+    user-select: none;
     position: fixed;
     bottom: 0;
     height: 20px;
@@ -164,10 +193,15 @@ footer {
       text-transform: uppercase;
       font-size: 1rem;
 
-      @media screen and (max-width: 800px) {
-        font-size: 0.5rem;
+      @media screen and (max-width: 900px) {
+        font-size: 0.65rem;
+        text-align: center;
       }
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-top: 20px;
   }
 }
 </style>
