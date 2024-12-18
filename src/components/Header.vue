@@ -2,13 +2,11 @@
   <header>
     <div class="container_header">
       <div class="container_logo">
-        <router-link to="/"
-          ><img src=".//logo_header.png" alt=""
-        /></router-link>
+        <router-link to="/"><img src="/logo_header.png" alt="" /></router-link>
       </div>
       <nav :class="{ mostrar_menu: isOpen }">
         <div class="content_logo_menu">
-          <img src=".//logo_header.png" alt="" />
+          <img src="/logo_header.png" alt="" />
         </div>
         <div class="menu">
           <router-link to="/">Inicio</router-link>
