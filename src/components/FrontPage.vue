@@ -248,7 +248,7 @@ onUnmounted(() => {
 
       @media screen and (max-width: 900px) {
         width: 40rem;
-        margin-left: -40%;
+        margin-left: -50%;
       }
     }
     .container_buttons {

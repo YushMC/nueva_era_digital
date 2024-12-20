@@ -55,6 +55,16 @@
       "text_button": "Empezar",
       "url_img": "/card_icons/IconMarkD.svg",
       "url_boton": "#"
+    },
+    {
+      "id": 7,
+      "name": "Portada de Desarrollo Escritorio",
+      "tittle": "No inventamos la web, solamente la mejoramos. Desarrollo de escritorio que funciona.",
+      "subtittle": "Desarrollo de Escritorio",
+      "desc": "",
+      "text_button": "Empezar",
+      "url_img": "/Mockup WebSite UI desing.png",
+      "url_boton": "#"
     }
   ]
 }

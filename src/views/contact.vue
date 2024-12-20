@@ -99,7 +99,9 @@
 <script setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectFade, Autoplay } from "swiper/modules";
-import { reactive, ref } from "vue";
+import { onMounted, reactive, ref } from "vue";
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
 
 // Import Swiper styles
 import "swiper/css";
@@ -151,6 +153,11 @@ const validateForm = () => {
     alert("Formulario enviado con éxito");
   }
 };
+
+onMounted(() => {
+  isSubMenuVisible.value = false;
+  isOpen.value = false;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -288,7 +295,8 @@ const validateForm = () => {
 
   @media screen and (max-width: 900px) {
     @include columnas_flexibles();
-    padding-top: 20%;
+    flex-direction: column-reverse;
+    padding-top: 30%;
 
     textarea {
       margin-top: 5% !important;

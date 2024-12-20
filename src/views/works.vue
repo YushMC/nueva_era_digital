@@ -9,7 +9,12 @@
       </p>
     </section>
     <div class="container_cards_horizontal">
-      <div class="card_horizontal" v-for="work in works" :key="work.id">
+      <div
+        class="card_horizontal"
+        v-for="work in works"
+        :key="work.id"
+        :style="{ backgroundImage: `url(${work.url_img_1})` }"
+      >
         <div class="container_info">
           <div class="container_images">
             <Swiper
@@ -29,21 +34,33 @@
               class="mySwiper"
             >
               <SwiperSlide>
-                <img src="/prueba.jpeg" alt="" />
+                <img :src="work.url_img_1" alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/prueba.jpeg" alt="" />
+                <img :src="work.url_img_2" alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img :src="work.url_img_3" alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
 
           <div class="container_text">
-            <h3>{{ work.name }}</h3>
+            <div class="content_logo">
+              <h3>{{ work.name }}</h3>
+              <img :src="work.url_logo" :alt="'logo ' + work.name" />
+            </div>
             <p>
               {{ work.desc }}
             </p>
             <div class="container_links">
               <a :href="work.link">Visitar</a>
+            </div>
+            <div class="tecnologias">
+              <img :src="work.tec_1" alt="" />
+              <img :src="work.tec_2" alt="" />
+              <img :src="work.tec_3" alt="" />
+              <img :src="work.tec_4" alt="" />
             </div>
           </div>
         </div>
@@ -54,6 +71,10 @@
 
 <script setup>
 document.title = "Nuestro Trabajo - Nueva Era Digital";
+
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
+
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -69,9 +90,15 @@ import { EffectCube, Navigation, Pagination } from "swiper/modules";
 
 // Importa directamente el archivo JSON
 import worksData from "@/json/trabajos.json";
+import { onMounted } from "vue";
 
 // Usamos los datos directamente
 const works = worksData.works;
+
+onMounted(() => {
+  isSubMenuVisible.value = false;
+  isOpen.value = false;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -106,7 +133,8 @@ section {
       visibility: hidden;
       transform: translateY(300px);
       box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-      @include contendor_doble_rejilla();
+      display: grid;
+      grid-template-columns: 3fr 2fr;
       transition: all 0.5s linear;
 
       .container_images {
@@ -118,8 +146,8 @@ section {
         transition: all 0.5s linear;
 
         .swiper {
-          width: 300px;
-          height: 300px;
+          width: 400px;
+          height: 360px;
           .swiper-slide {
             margin: auto;
             height: fit-content !important;
@@ -129,7 +157,15 @@ section {
             img {
               display: block;
               width: 100%;
+              aspect-ratio: 4/3;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 10px;
             }
+          }
+
+          @media screen and (max-width: 900px) {
+            height: 15rem;
           }
         }
       }
@@ -145,11 +181,47 @@ section {
         border-radius: $border_radius;
         backdrop-filter: blur($blur);
         transition: all 0.5s linear;
-
-        h3 {
+        .content_logo {
+          width: 100%;
           margin: 2% 0;
+          padding: 2%;
           position: sticky;
           top: 10px;
+          @include contendor_doble_rejilla();
+          gap: 3rem !important;
+          h3 {
+            width: 100%;
+            text-align: center;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          height: 12rem;
+          overflow-y: auto;
+        }
+        .container_links {
+          width: 100%;
+          padding: 2%;
+          @include centrar_elementos();
+
+          a {
+            padding: 2% 2rem;
+            background: $color_principal;
+            color: #fff;
+            border-radius: $border_radius;
+          }
+        }
+        .tecnologias {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2%;
+          img {
+            width: 2rem;
+          }
         }
 
         @media screen and (max-width: 900px) {
@@ -160,7 +232,7 @@ section {
       }
 
       @media screen and (max-width: 900px) {
-        padding: 5%;
+        padding: 2%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -184,6 +256,14 @@ section {
     @media screen and (max-width: 900px) {
       display: flex;
       flex-direction: column;
+      height: 10rem;
+
+      &:hover {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: $color_principal;
+        height: 40rem;
+      }
     }
   }
 

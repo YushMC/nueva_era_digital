@@ -33,15 +33,22 @@
 
 <script setup>
 document.title = "Desarrollo Web - Nueva Era Digital";
-import Card from "../components/Card.vue";
+import { onMounted } from "vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
 
 // Importa directamente el archivo JSON
 import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
 const frontPage = frontPagesData.frontPages.find((t) => t.id === 2);
+
+onMounted(() => {
+  isSubMenuVisible.value = false;
+  isOpen.value = false;
+});
 </script>
 
 <style lang="scss" scoped></style>

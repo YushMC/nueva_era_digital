@@ -5,35 +5,45 @@
       "name": "Desarrollo Móvil",
       "type": "Tecnología",
       "desc": "Creamos aplicaciones móviles para iOS y Android, diseñadas para ofrecer una experiencia intuitiva y funcional, que permita conectar con tus clientes de manera directa y efectiva.",
-      "url_icon": "/card_icons/MD.svg"
+      "url_icon": "/card_icons/MD.svg",
+      "price": "$4,999 MXN",
+      "route": "/movil"
     },
     {
       "id": 2,
       "name": "Desarrollo Web",
       "type": "Tecnología",
       "desc": "Diseñamos sitios web modernos, funcionales y optimizados para ofrecer una experiencia de usuario fluida y profesional, que refleje la identidad y los valores de tu marca.",
-      "url_icon": "/card_icons/iconDeWb.svg"
+      "url_icon": "/card_icons/iconDeWb.svg",
+      "price": "$2,999 MXN",
+      "route": "/web"
     },
     {
       "id": 3,
-      "name": "Desarrollo de Escriotorio",
+      "name": "Desarrollo de Escritorio",
       "type": "Tecnología",
       "desc": "Desarrollamos aplicaciones robustas y eficientes para plataformas Windows y macOS, diseñadas para optimizar tus procesos internos y mejorar la productividad de tu empresa.",
-      "url_icon": "/card_icons/DesarrolloEscritorio.svg"
+      "url_icon": "/card_icons/DesarrolloEscritorio.svg",
+      "price": "$2,999 MXN",
+      "route": "/desktop"
     },
     {
       "id": 4,
       "name": "Branding",
       "type": "Mercadotecnia",
       "desc": " Ayudamos a crear una imagen de marca coherente y atractiva, desde la conceptualización del logotipo hasta la definición de la paleta de colores, tipografía y toda la identidad visual que representará tu negocio.",
-      "url_icon": "/card_icons/BrandingIc.svg"
+      "url_icon": "/card_icons/BrandingIc.svg",
+      "price": "$999 MXN",
+      "route": "/branding"
     },
     {
       "id": 5,
       "name": "Marketing Digital y Redes Sociales",
       "type": "Mercadotecnia",
       "desc": "Desarrollamos estrategias digitales personalizadas para potenciar tu presencia en redes sociales, generando contenido relevante, gestionando campañas publicitarias y analizando resultados para maximizar tu impacto online.",
-      "url_icon": "/card_icons/IconMarkD.svg"
+      "url_icon": "/card_icons/IconMarkD.svg",
+      "price": "$999 MXN/mes",
+      "route": "/marketing"
     }
   ]
 }

@@ -8,6 +8,7 @@ import Marketing from "../views/marketing.vue";
 import Works from "../views/works.vue";
 import AboutUs from "../views/aboutUs.vue";
 import Contact from "../views/contact.vue";
+import Desktop from "../views/desktop.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/web",
     name: "web",
     component: Web,
+  },
+  {
+    path: "/desktop",
+    name: "Desktop",
+    component: Desktop,
   },
   {
     path: "/branding",

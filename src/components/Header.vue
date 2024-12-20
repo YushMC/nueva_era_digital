@@ -12,15 +12,22 @@
           <router-link to="/">Inicio</router-link>
           <hr />
         </div>
-        <div class="menu">
-          <a>Servicios ˅</a>
+        <div class="menu" @click="togleSubMenu">
+          <a
+            >Servicios
+            <span :class="{ rotarCarret: isSubMenuVisible }"
+              ><i class="fas fa-caret-down"></i></span
+          ></a>
           <hr />
-          <div class="sub_menu">
+          <div class="sub_menu" v-if="isSubMenuVisible">
             <div class="enlaces">
               <div>
                 <h5>Productos</h5>
                 <router-link to="/web">Desarrollo Web</router-link>
                 <router-link to="/movil">Desarrollo Móvil</router-link>
+                <router-link to="/desktop"
+                  >Desarrollo de Escritorio</router-link
+                >
               </div>
               <div>
                 <h5>Servicios</h5>
@@ -76,19 +83,24 @@
   <div
     class="jaja"
     @click="toggleMenu"
-    :class="{ activar_desactivador: isOpen }"
+    :class="{ activar_desactivador: isOpen || isSubMenuVisible }"
   ></div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-
 // Estado para controlar si el menú está abierto o cerrado
-const isOpen = ref(false);
+
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
 
 // Función para alternar el estado de abierto/cerrado
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
+  isSubMenuVisible.value = false;
+};
+
+const togleSubMenu = () => {
+  isSubMenuVisible.value = !isSubMenuVisible.value;
 };
 </script>
 
@@ -155,6 +167,11 @@ header {
             margin: 4% 0;
           }
         }
+        .rotarCarret {
+          i {
+            transform: rotate(180deg);
+          }
+        }
         .sub_menu {
           position: absolute;
           top: 70px;
@@ -165,7 +182,7 @@ header {
           border-radius: $border_radius;
           backdrop-filter: blur($blur) !important;
           transition: all 0.3s linear;
-          @include ocultar_elemento();
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
           @include columnas_flexibles();
           h5 {
             margin: 2% 0;
@@ -192,6 +209,7 @@ header {
                 width: 100%;
                 padding: 2%;
                 margin: 1% 0;
+                cursor: pointer !important;
                 color: rgba(0, 0, 0, 0.568);
                 transition: all 0.3s linear;
                 border-radius: $border_radius;
@@ -204,6 +222,7 @@ header {
                   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
                   transform: scale(1.01);
                 }
+
                 @media screen and (max-width: 900px) {
                   width: 100%;
                 }
@@ -248,6 +267,7 @@ header {
             }
             @media screen and (max-width: 900px) {
               flex-wrap: wrap;
+              display: none;
             }
           }
 
@@ -260,10 +280,7 @@ header {
             width: 100%;
           }
         }
-        &:hover .sub_menu {
-          @include mostrar_elemento();
-          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
-
+        .sub_menu {
           @media screen and (max-width: 900px) {
             display: block;
             transition: all 0.3s linear;
@@ -287,11 +304,11 @@ header {
         top: 0%;
         left: 0;
         width: 70%;
-        padding: 2%;
+        padding: 5% 2%;
         background: rgb(240, 240, 240);
         z-index: 90;
         box-shadow: 0px 30px 40px 10px rgba(0, 0, 0, 0.774) !important;
-        overflow: auto;
+        overflow: scroll;
         transition: all 0.5s linear;
         transform: translateX(-650px);
         &.mostrar_menu {
@@ -333,7 +350,11 @@ header {
     background: rgba(240, 240, 240, 0.63);
   }
 }
-
+span {
+  i {
+    transition: all 0.3s linear;
+  }
+}
 /* Estilo base del icono de barras */
 .menu-toggle {
   display: flex;
@@ -372,15 +393,11 @@ header {
 .jaja {
   display: none;
   position: fixed;
-  width: 100dvh;
+  width: 100dvw;
   left: 0;
   top: 0;
   height: 100dvh;
   z-index: 50 !important;
-
-  @media screen and (min-width: 901px) {
-    display: none;
-  }
 
   &.activar_desactivador {
     display: block;

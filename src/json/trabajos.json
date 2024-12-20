@@ -3,29 +3,17 @@
     {
       "id": 1,
       "name": "Orange",
-      "type": "Salud",
-      "desc": "hola xd",
-      "link": "#",
-      "url_logo": "",
-      "screenshoots": "#"
-    },
-    {
-      "id": 2,
-      "name": "Orange",
-      "tipo": "Viajes",
-      "descripcion": "hola xd",
-      "link": "#",
-      "url_logo": "",
-      "screenshoots": "#"
-    },
-    {
-      "id": 3,
-      "name": "Orange",
-      "tipo": "Tecnología",
-      "descripcion": "hola xd",
-      "link": "#",
-      "url_logo": "",
-      "screenshoots": "#"
+      "type": "Limpieza",
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit praesentium dicta temporibus, laudantium cumque maiores corporis iusto cum necessitatibus quam sequi doloribus reprehenderit, enim vitae ad quis soluta saepe quos. Voluptatem earum, quasi in quae deserunt quo maxime aperiam, qui optio, esse labore. Vero, facere nemo! Modi ad sequi eius explicabo deserunt quasi repellat placeat obcaecati aut, facere quas?",
+      "link": "https://orangelimpiezaydesinfeccion.com/",
+      "url_logo": "https://orangelimpiezaydesinfeccion.com/wp-content/uploads/2024/12/Logo-V3-blanco.png",
+      "url_img_1": "/trabajos/orange/portada_orange.png",
+      "url_img_2": "/trabajos/orange/cap_2.png",
+      "url_img_3": "/trabajos/orange/cap_3.png",
+      "tec_1": "/icons/wordpress.svg",
+      "tec_2": "",
+      "tec_3": "",
+      "tec_4": ""
     }
   ]
 }

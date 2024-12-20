@@ -1,20 +1,4 @@
 {
-  "home": [
-    {
-      "id": 1,
-      "tittle": "HOLA",
-      "subtittle": "esto es un subtitulo",
-      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
-      "url_img": "/card_icons/MD.svg"
-    },
-    {
-      "id": 2,
-      "tittle": "HOLA",
-      "subtittle": "esto es un subtitulo",
-      "desc": "Creamos aplicaciones móviles personalizadas, con accesibilidad y estables en tiempo real.",
-      "url_img": "/card_icons/MD.svg"
-    }
-  ],
   "aboutUs": [
     {
       "id": 1,

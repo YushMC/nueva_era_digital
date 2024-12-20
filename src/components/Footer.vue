@@ -10,20 +10,41 @@
           <div>
             <h5>Contacto</h5>
             <ul>
-              <li>{{ footerInfo.email }}</li>
+              <li>
+                <a :href="'mailto:' + footerInfo.email">{{
+                  footerInfo.email
+                }}</a>
+              </li>
               <li>+52 {{ footerInfo.tel_1 }}</li>
+              <!-- 
               <li>+52 {{ footerInfo.tel_2 }}</li>
+              -->
             </ul>
           </div>
           <div>
             <h5>Nuestras Redes</h5>
             <ul>
-              <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li>
+              <!-- <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li> -->
               <li>
-                <i class="fab fa-facebook-square"></i> {{ footerInfo.facebook }}
+                <i class="fab fa-facebook-square"></i>
+                <a
+                  :href="footerInfo.facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="margin-left: 5px"
+                  >{{ footerInfo.facebook }}</a
+                >
               </li>
+
               <li>
-                <i class="fab fa-instagram"></i> {{ footerInfo.instagram }}
+                <i class="fab fa-instagram"></i>
+                <a
+                  :href="footerInfo.instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="margin-left: 5px"
+                  >{{ footerInfo.instagram }}</a
+                >
               </li>
             </ul>
           </div>
@@ -103,10 +124,14 @@ footer {
         div {
           display: flex;
           flex-direction: column;
+          margin-left: -10px !important;
           li {
             color: #fff;
             width: 100%;
           }
+        }
+        @media screen and (max-width: 900px) {
+          @include columnas_flexibles_izquierda;
         }
       }
       @media screen and (max-width: 900px) {
@@ -144,15 +169,15 @@ footer {
       flex-direction: column;
       list-style: none;
       li {
-        width: 50%;
+        width: 100%;
         margin: 2% 0;
-        transition: all 0.3s linear;
+        transition: all 0.5s linear;
         color: #fff;
 
         padding: 3%;
 
         &:hover {
-          transform: skewY(-0.5deg) scale(1) translateX(10px);
+          transform: skewY(-0.1deg) scale(1) translateX(5px);
           color: #000 !important;
           cursor: pointer;
           background: linear-gradient(
@@ -164,6 +189,7 @@ footer {
           border-radius: $border_radius;
           background-size: 100%;
           a {
+            width: 100%;
             color: #000;
           }
         }

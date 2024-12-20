@@ -53,9 +53,16 @@ const cardInfo3 = cardsData.aboutUs.find((t) => t.id === 2);
 
 // Importa directamente el archivo JSON
 import frontPagesData from "@/json/portadas.json";
+import { onMounted } from "vue";
 
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
 // Usamos los datos directamente
 const frontPage = frontPagesData.frontPages.find((t) => t.id === 1);
+onMounted(() => {
+  isSubMenuVisible.value = false;
+  isOpen.value = false;
+});
 </script>
 
 <style lang="scss" scoped>

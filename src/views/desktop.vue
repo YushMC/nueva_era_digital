@@ -32,9 +32,8 @@
 </template>
 
 <script setup>
-document.title = "Desarrollo Móvil - Nueva Era Digital";
+document.title = "Desarrollo de Escritorio - Nueva Era Digital";
 import { onMounted } from "vue";
-import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
 import { useMenu } from "../composables/useMenu";
@@ -44,7 +43,7 @@ const { isSubMenuVisible, isOpen } = useMenu();
 import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
-const frontPage = frontPagesData.frontPages.find((t) => t.id === 3);
+const frontPage = frontPagesData.frontPages.find((t) => t.id === 7);
 
 onMounted(() => {
   isSubMenuVisible.value = false;

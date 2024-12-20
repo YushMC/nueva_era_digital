@@ -17,11 +17,15 @@
       <Card
         v-for="service in services"
         :key="service.id"
+        :precio="service.price"
+        :routePush="service.route"
         :titulo="service.name"
         :icono="service.url_icon"
         :parrafo="service.desc"
       ></Card>
     </div>
+
+    <hr />
     <Section
       v-for="infoCards in cards"
       :key="infoCards.id"
@@ -30,7 +34,7 @@
       :parrafo_section="infoCards.desc"
       :url_img="infoCards.url_img"
     ></Section>
-
+    <hr />
     <section class="works">
       <h5 class="subtitulos">Nuestro Trabajo</h5>
       <h3 class="titulos">Soluciones digitales para problemas reales</h3>
@@ -43,24 +47,20 @@
       </div>
 
       <div class="container_cards_works">
-        <div class="card_img">
+        <div
+          class="card_img"
+          v-for="work in works"
+          :key="work.id"
+          :style="{ backgroundImage: `url(${work.url_img_1})` }"
+        >
           <div class="text_work">
-            <h4>Trabajo 1</h4>
-          </div>
-        </div>
-        <div class="card_img">
-          <div class="text_work">
-            <h4>Trabajo 1</h4>
-          </div>
-        </div>
-        <div class="card_img">
-          <div class="text_work">
-            <h4>Trabajo 1</h4>
-          </div>
-        </div>
-        <div class="card_img">
-          <div class="text_work">
-            <h4>Trabajo 1</h4>
+            <h4>{{ work.name }}</h4>
+            <p>
+              {{ work.desc }}
+            </p>
+            <div class="container_links">
+              <a :href="work.link">Visitar</a>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +94,8 @@ document.title = "Inicio - Nueva Era Digital";
 import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
-
+import { useMenu } from "../composables/useMenu";
+const { isSubMenuVisible, isOpen } = useMenu();
 // Importa directamente el archivo JSON
 import frontPagesData from "@/json/portadas.json";
 
@@ -111,7 +112,25 @@ const services = servicesData.services;
 import cardsData from "@/json/infoCartas.json";
 
 // Usamos los datos directamente
-const cards = cardsData.home;
+const cards = cardsData.aboutUs;
+
+// Importa directamente el archivo JSON
+import worksData from "@/json/trabajos.json";
+import { onMounted } from "vue";
+
+// Usamos los datos directamente
+const works = worksData.works;
+
+onMounted(() => {
+  isSubMenuVisible.value = false;
+  isOpen.value = false;
+});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+hr {
+  width: 80%;
+  margin: 2% auto;
+  opacity: 0.2;
+}
+</style>
