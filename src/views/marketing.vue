@@ -11,22 +11,11 @@
     ></FrontPage>
 
     <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
+      v-for="infoMarketing in marketing"
+      :titulo_section="infoMarketing.title"
+      :subtitulo_section="infoMarketing.desc"
+      :parrafo_section="infoMarketing.desc"
+      :url_img="infoMarketing.url_img"
     ></Section>
   </div>
 </template>
@@ -34,7 +23,6 @@
 <script setup>
 document.title = "Marketing - Nueva Era Digital";
 import { onMounted } from "vue";
-import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
 import { useMenu } from "../composables/useMenu";
@@ -45,6 +33,12 @@ import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
 const frontPage = frontPagesData.frontPages.find((t) => t.id === 5);
+
+// Importa directamente el archivo JSON
+import marketingData from "@/json/marketing.json";
+
+// Usamos los datos directamente
+const marketing = marketingData.info;
 
 onMounted(() => {
   isSubMenuVisible.value = false;

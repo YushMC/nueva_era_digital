@@ -142,6 +142,7 @@ if (pagina_de_nosotros.value) {
   url_boton_portada.value = props.url_boton_portada_id;
 }
 const handleMouseMove = (event) => {
+  /*
   const container = containerRef.value;
   if (!container) return;
 
@@ -165,6 +166,7 @@ const handleMouseMove = (event) => {
   setTimeout(() => {
     ink.remove();
   }, 600); // Tiempo de duración de la animación
+  */
 };
 
 // Configurar el listener al montar el componente y eliminarlo al desmontarlo
@@ -191,7 +193,7 @@ onUnmounted(() => {
 .container_front_page {
   position: relative; /* Esto asegura que los elementos 'ink' se posicionen correctamente */
   width: 100%;
-  padding: 5% 10%;
+  padding: 8% 10%;
   margin: auto;
   user-select: none;
   @include contendor_doble_rejilla();
@@ -210,18 +212,30 @@ onUnmounted(() => {
 
   .container_imgs {
     width: 100%;
+    position: relative;
     @include centrar_elementos();
 
     img {
-      width: 100%;
+      width: 30rem;
       filter: drop-shadow(1px 5px 5px #000000a9);
     }
 
     .arriba {
       position: absolute;
-      width: 25%;
-      margin-top: 15%;
-      margin-right: -25%;
+      width: fit-content;
+      height: fit-content;
+      bottom: 5%;
+      right: 20%;
+      padding: 0;
+      margin: 0;
+
+      img {
+        width: 5rem;
+        height: 12rem;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
     }
   }
   .container_imgs_swiper {

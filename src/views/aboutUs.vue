@@ -1,19 +1,22 @@
 <template>
-  <div class="estructura">
-    <FrontPage
-      :titulo_portada_frontpage="frontPage.tittle"
-      :parrafo_front_page="frontPage.desc"
-      :texto_boton_portada_front="frontPage.text_button"
-      :url_img_front_page="frontPage.url_img"
-      :url_boton_portada_id="frontPage.url_boton"
-      :pagina_inicio="false"
-      :pagina_nosotros="true"
-    ></FrontPage>
+  <div class="estructura" style="padding-top: 5%">
     <Section
       :titulo_section="cardInfo.tittle"
       :subtitulo_section="cardInfo.subtittle"
       :parrafo_section="cardInfo.desc"
       :url_img="cardInfo.url_img"
+    ></Section>
+    <Section
+      :titulo_section="cardInfo3.tittle"
+      :subtitulo_section="cardInfo3.subtittle"
+      :parrafo_section="cardInfo3.desc"
+      :url_img="cardInfo3.url_img"
+    ></Section>
+    <Section
+      :titulo_section="cardInfo4.tittle"
+      :subtitulo_section="cardInfo4.subtittle"
+      :parrafo_section="cardInfo4.desc"
+      :url_img="cardInfo4.url_img"
     ></Section>
     <article class="cards_empresa">
       <div class="card_empresa" v-for="cardInfo2 in cards" :key="cardInfo2.id">
@@ -26,12 +29,6 @@
         </p>
       </div>
     </article>
-    <Section
-      :titulo_section="cardInfo3.tittle"
-      :subtitulo_section="cardInfo3.subtittle"
-      :parrafo_section="cardInfo3.desc"
-      :url_img="cardInfo3.url_img"
-    ></Section>
   </div>
 </template>
 
@@ -50,6 +47,7 @@ const cards = cardsData.skills;
 
 // Usamos los datos directamente
 const cardInfo3 = cardsData.aboutUs.find((t) => t.id === 2);
+const cardInfo4 = cardsData.aboutUs.find((t) => t.id === 3);
 
 // Importa directamente el archivo JSON
 import frontPagesData from "@/json/portadas.json";

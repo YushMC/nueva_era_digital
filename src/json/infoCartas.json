@@ -12,7 +12,14 @@
       "tittle": "Misión",
       "subtittle": "Sobre Nosotros",
       "desc": "Nuestra misión es ayudarte a aprovechar al máximo las herramientas digitales, creando soluciones personalizadas que impulsen tu negocio y mejoren la experiencia de tus usuarios. Con un enfoque en la calidad, la innovación y el compromiso, nos aseguramos de que cada proyecto se entregue con la más alta excelencia y en los plazos establecidos. ¡Déjanos llevar tu presencia digital al siguiente nivel!",
-      "url_img": "https://nuevaeradigital.mx/wp-content/uploads/2024/11/pexels-oandremoura-4903384-1536x2048.jpg"
+      "url_img": "/aboutus/code_1.jpg"
+    },
+    {
+      "id": 3,
+      "tittle": "Visión",
+      "subtittle": "Sobre Nosotros",
+      "desc": "a",
+      "url_img": "/aboutus/code_2.jpg"
     }
   ],
   "skills": [

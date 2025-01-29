@@ -1,6 +1,10 @@
 <template>
   <div class="float_button">
-    <a href="" target="_blank" rel="noopener noreferrer">
+    <a
+      :href="`https://wa.me/52${footerInfo.tel_1}`"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <i class="fab fa-whatsapp"></i>
       <div class="div_info">
         <h6>¡Envianos un WhatsApp!</h6>
@@ -9,7 +13,12 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import footerData from "@/json/infoEmpresa.json";
+
+// Usamos los datos directamente
+const footerInfo = footerData.footer.find((t) => t.id === 1);
+</script>
 
 <style lang="scss" scoped>
 @use "@/styles/_variables.scss" as *;

@@ -24,16 +24,6 @@
         :parrafo="service.desc"
       ></Card>
     </div>
-
-    <hr />
-    <Section
-      v-for="infoCards in cards"
-      :key="infoCards.id"
-      :titulo_section="infoCards.tittle"
-      :subtitulo_section="infoCards.subtittle"
-      :parrafo_section="infoCards.desc"
-      :url_img="infoCards.url_img"
-    ></Section>
     <hr />
     <section class="works">
       <h5 class="subtitulos">Nuestro Trabajo</h5>

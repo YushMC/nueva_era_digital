@@ -1,14 +1,13 @@
 <template>
   <section class="sections">
     <div class="content_text">
-      <h5 class="subtitulos">{{ subtitulo_seccion }}</h5>
       <h3 class="titulos">{{ titulo_seccion }}</h3>
       <p>
         {{ parrafo_seccion }}
       </p>
     </div>
     <div class="content_media">
-      <img :src="url_img_seccion" alt="" />
+      <img :src="url_img_seccion" alt="" loading="lazy" />
     </div>
   </section>
 </template>
@@ -69,9 +68,9 @@ parrafo_seccion.value = props.parrafo_section;
     width: 48%;
     @include centrar_elementos();
     img {
-      width: 50%;
-      border-radius: $border_radius_img;
-      aspect-ratio: 16/9;
+      width: 20dvw;
+      border-radius: calc($border_radius_img/2);
+
       object-fit: contain;
       object-position: center;
     }
@@ -88,7 +87,7 @@ parrafo_seccion.value = props.parrafo_section;
     flex-direction: column !important;
   }
 
-  &:nth-child(2n + 1) {
+  &:nth-child(even) {
     flex-direction: row-reverse !important;
     background: $negro_transparente;
 

@@ -69,7 +69,7 @@
       </div>
     </div>
     <div class="container_copyright">
-      <h2>{{ footerInfo.copyright }}</h2>
+      <h2>©​ {{ year }} {{ footerInfo.copyright }}</h2>
     </div>
   </footer>
 </template>
@@ -80,6 +80,9 @@ import footerData from "@/json/infoEmpresa.json";
 
 // Usamos los datos directamente
 const footerInfo = footerData.footer.find((t) => t.id === 1);
+
+const d = new Date();
+let year = d.getFullYear();
 </script>
 
 <style lang="scss" scoped>

@@ -25,9 +25,11 @@
                 <h5>Productos</h5>
                 <router-link to="/web">Desarrollo Web</router-link>
                 <router-link to="/movil">Desarrollo Móvil</router-link>
+                <!-- 
                 <router-link to="/desktop"
-                  >Desarrollo de Escritorio</router-link
+                  > Desarrollo de Escritorio </router-link
                 >
+                -->
               </div>
               <div>
                 <h5>Servicios</h5>

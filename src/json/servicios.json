@@ -16,16 +16,7 @@
       "desc": "Diseñamos sitios web modernos, funcionales y optimizados para ofrecer una experiencia de usuario fluida y profesional, que refleje la identidad y los valores de tu marca.",
       "url_icon": "/card_icons/iconDeWb.svg",
       "price": "$2,999 MXN",
-      "route": "/web"
-    },
-    {
-      "id": 3,
-      "name": "Desarrollo de Escritorio",
-      "type": "Tecnología",
-      "desc": "Desarrollamos aplicaciones robustas y eficientes para plataformas Windows y macOS, diseñadas para optimizar tus procesos internos y mejorar la productividad de tu empresa.",
-      "url_icon": "/card_icons/DesarrolloEscritorio.svg",
-      "price": "$2,999 MXN",
-      "route": "/desktop"
+      "route": "web"
     },
     {
       "id": 4,
@@ -38,7 +29,7 @@
     },
     {
       "id": 5,
-      "name": "Marketing Digital y Redes Sociales",
+      "name": "Marketing Digital y Redes",
       "type": "Mercadotecnia",
       "desc": "Desarrollamos estrategias digitales personalizadas para potenciar tu presencia en redes sociales, generando contenido relevante, gestionando campañas publicitarias y analizando resultados para maximizar tu impacto online.",
       "url_icon": "/card_icons/IconMarkD.svg",

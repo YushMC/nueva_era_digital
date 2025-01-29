@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Portada de Inicio",
-      "tittle": "Transforma tus ideas en negocios digitales.",
-      "desc": "Impulsamos tu crecimiento digital con soluciones tecnológicas integrales. Somos expertos en desarrollo web, software a medida, posicionamiento web (SEO) y otros servicios diseñados para optimizar tu negocio en el mundo digital. Nuestro enfoque combina innovación, creatividad y tecnología para ofrecer resultados efectivos que transforman tus ideas en realidad.",
+      "tittle": "Plasma tus ideas en el mundo digital.",
+      "desc": "Potenciamos la evolución digital en soluciones tecnológicas completas con una amplia experiencia en desarrollo web, creación de software personalizado, optimización para motores de búsqueda (SEO) y diversos servicios. Nuestra metodología une innovación, creatividad y tecnología para obtener resultados concretos y exitosos.",
       "text_button": "Empezar",
       "url_img": "/Mockup WebSite UI desing.png",
       "url_boton": "#servicios"
@@ -32,7 +32,7 @@
     {
       "id": 4,
       "name": "Portada de Branding",
-      "tittle": "Branding",
+      "tittle": "Crea tu marca para la posteridad.",
       "desc": "esto es un desc",
       "text_button": "Empezar",
       "url_img": "/card_icons/BrandingIc.svg",

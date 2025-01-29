@@ -11,22 +11,11 @@
     ></FrontPage>
 
     <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
+      v-for="infoMovil in movil"
+      :titulo_section="infoMovil.title"
+      :subtitulo_section="infoMovil.desc"
+      :parrafo_section="infoMovil.desc"
+      :url_img="infoMovil.url_img"
     ></Section>
   </div>
 </template>
@@ -45,6 +34,12 @@ import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
 const frontPage = frontPagesData.frontPages.find((t) => t.id === 3);
+
+// Importa directamente el archivo JSON
+import movilData from "@/json/movil.json";
+
+// Usamos los datos directamente
+const movil = movilData.info;
 
 onMounted(() => {
   isSubMenuVisible.value = false;

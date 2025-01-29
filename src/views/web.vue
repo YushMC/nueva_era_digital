@@ -11,28 +11,16 @@
     ></FrontPage>
 
     <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
-    ></Section>
-    <Section
-      titulo_section="HOLA"
-      subtitulo_section="esto es un subtitulo"
-      parrafo_section="Esto es un parrafo"
-      url_img="/prueba.jpeg"
+      v-for="infoWeb in web"
+      :titulo_section="infoWeb.title"
+      :subtitulo_section="infoWeb.desc"
+      :parrafo_section="infoWeb.desc"
+      :url_img="infoWeb.url_img"
     ></Section>
   </div>
 </template>
 
 <script setup>
-document.title = "Desarrollo Web - Nueva Era Digital";
 import { onMounted } from "vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
@@ -44,6 +32,23 @@ import frontPagesData from "@/json/portadas.json";
 
 // Usamos los datos directamente
 const frontPage = frontPagesData.frontPages.find((t) => t.id === 2);
+
+// Importa directamente el archivo JSON
+import webData from "@/json/web.json";
+
+// Usamos los datos directamente
+const web = webData.info;
+//etiquetas seo
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Desarrollo Web - Nueva Era Digital",
+  meta: [
+    { name: "description", content: "Descripción optimizada para SEO" },
+    { property: "og:title", content: "Desarrollo Web que funciona!" },
+    { property: "og:description", content: "Descripción optimizada" },
+  ],
+});
 
 onMounted(() => {
   isSubMenuVisible.value = false;

@@ -1,31 +1,5 @@
 <template>
   <div class="container_contact">
-    <div class="container_swiper">
-      <swiper
-        :spaceBetween="30"
-        :effect="'fade'"
-        :modules="[EffectFade, Autoplay]"
-        :autoplay="{
-          delay: 5000,
-          disableOnInteraction: false,
-        }"
-        :loop="true"
-        class="mySwiper"
-      >
-        <swiper-slide
-          ><img src="https://swiperjs.com/demos/images/nature-1.jpg"
-        /></swiper-slide>
-        <swiper-slide
-          ><img src="https://swiperjs.com/demos/images/nature-2.jpg"
-        /></swiper-slide>
-        <swiper-slide
-          ><img src="https://swiperjs.com/demos/images/nature-3.jpg"
-        /></swiper-slide>
-        <swiper-slide
-          ><img src="https://swiperjs.com/demos/images/nature-4.jpg"
-        /></swiper-slide>
-      </swiper>
-    </div>
     <div class="container_form">
       <h2>Contáctanos</h2>
       <p>
@@ -51,23 +25,7 @@
             :class="{ error: errors.name }"
           />
         </div>
-        <div>
-          <label
-            for="correo"
-            :class="{ active: isFocused.email || formData.email.trim() !== '' }"
-          >
-            Correo Electrónico <span>*</span>
-          </label>
-          <input
-            type="email"
-            id="correo"
-            v-model="formData.email"
-            @focus="isFocused.email = true"
-            @blur="checkEmpty('email')"
-            @invalid="setError('email')"
-            :class="{ error: errors.email }"
-          />
-        </div>
+
         <div>
           <label
             for="mensaje"
@@ -88,7 +46,7 @@
           ></textarea>
         </div>
         <div class="container_buttons">
-          <button type="submit">Enviar</button>
+          <a target="_blank" @click="validateForm">Enviar</a>
         </div>
         <label class="info_user">* Obligatorio</label>
       </form>
@@ -112,14 +70,14 @@ import "swiper/css/pagination";
 // Datos del formulario
 const formData = reactive({
   name: "",
-  email: "",
   message: "",
 });
+
+const linkForm = ref("#");
 
 // Estados de enfoque
 const isFocused = reactive({
   name: false,
-  email: false,
   message: false,
 });
 
@@ -145,14 +103,23 @@ const setError = (field) => {
 const validateForm = () => {
   // Reiniciar errores
   errors.name = !formData.name.trim();
-  errors.email = !formData.email.trim();
   errors.message = !formData.message.trim();
   // Si no hay errores, enviar el formulario
   const hasErrors = Object.values(errors).some((error) => error);
   if (!hasErrors) {
-    alert("Formulario enviado con éxito");
+    window.open(
+      `https://wa.me/52${
+        footerInfo.tel_1
+      }?text=Hola, soy ${formData.name.trim()}!\n\n ${formData.message.trim()} `
+    );
+  } else {
+    return false;
   }
 };
+import footerData from "@/json/infoEmpresa.json";
+
+// Usamos los datos directamente
+const footerInfo = footerData.footer.find((t) => t.id === 1);
 
 onMounted(() => {
   isSubMenuVisible.value = false;
@@ -165,37 +132,13 @@ onMounted(() => {
 @use "../styles/variables" as *;
 
 .container_contact {
-  width: 100%;
-  padding: 10%;
+  padding: 5% 10%;
   background: $negro_transparente;
-  @include contendor_doble_rejilla();
-
-  .container_swiper {
-    width: 100%;
-    display: flex;
-
-    .swiper {
-      width: 30rem;
-      margin: auto;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        @include centrar_elementos();
-
-        img {
-          display: block;
-          width: 100%;
-          border-radius: $border_radius;
-          filter: drop-shadow(5px 5px 20px #00000010);
-        }
-      }
-    }
-  }
+  @include centrar_elementos();
 
   .container_form {
-    width: 100%;
+    width: 60dvw;
+    margin: auto;
     padding: 5%;
     @include columnas_flexibles();
 
@@ -245,7 +188,7 @@ onMounted(() => {
         label {
           top: 50%;
           transform: translateY(-50%);
-          left: 5%;
+          left: 3%;
           position: absolute;
           transition: all 0.3s linear;
           padding: 1% 2%;
@@ -255,7 +198,8 @@ onMounted(() => {
           }
           &.active {
             // Mueve el label hacia arriba
-            top: 18%;
+            top: 25%;
+            left: 0%;
             opacity: 1;
             color: #fff;
             border-radius: $border_radius;
