@@ -33,13 +33,13 @@
         de la vida diaria
       </p>
       <div class="container_buttons">
-        <router-link to="/our-work">Trabajos recientes</router-link>
+        <router-link to="/our-work">Ver Todos</router-link>
       </div>
 
       <div class="container_cards_works">
         <div
           class="card_img"
-          v-for="work in works"
+          v-for="work in works.slice(-2)"
           :key="work.id"
           :style="{ backgroundImage: `url(${work.url_img_1})` }"
         >
@@ -48,9 +48,6 @@
             <p>
               {{ work.desc }}
             </p>
-            <div class="container_links">
-              <a :href="work.link">Visitar</a>
-            </div>
           </div>
         </div>
       </div>

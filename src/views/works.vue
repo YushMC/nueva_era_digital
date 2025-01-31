@@ -13,7 +13,7 @@
         class="card_horizontal"
         v-for="work in works"
         :key="work.id"
-        :style="{ backgroundImage: `url(${work.url_img_1})` }"
+        :style="{ backgroundImage: `url(${work.images[0].url})` }"
       >
         <div class="container_info">
           <div class="container_images">
@@ -33,14 +33,11 @@
               :modules="[EffectCube, Navigation, Pagination]"
               class="mySwiper"
             >
-              <SwiperSlide>
-                <img :src="work.url_img_1" alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img :src="work.url_img_2" alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img :src="work.url_img_3" alt="" />
+              <SwiperSlide
+                v-for="scerenshots in work.images"
+                :key="scerenshots.id"
+              >
+                <img :src="scerenshots.url" alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -48,19 +45,19 @@
           <div class="container_text">
             <div class="content_logo">
               <h3>{{ work.name }}</h3>
-              <img :src="work.url_logo" :alt="'logo ' + work.name" />
+              <img :src="work.url_logo" />
             </div>
             <p>
               {{ work.desc }}
             </p>
-            <div class="container_links">
-              <a :href="work.link">Visitar</a>
-            </div>
+            <h6>Con las tecnologías:</h6>
             <div class="tecnologias">
-              <img :src="work.tec_1" alt="" />
-              <img :src="work.tec_2" alt="" />
-              <img :src="work.tec_3" alt="" />
-              <img :src="work.tec_4" alt="" />
+              <img
+                v-for="tecnologies in work.tecnologiasUsadas"
+                :key="tecnologies.id"
+                :src="tecnologies.icon"
+                :title="tecnologies.name"
+              />
             </div>
           </div>
         </div>
@@ -70,6 +67,7 @@
 </template>
 
 <script setup>
+import { onMounted, computed } from "vue";
 document.title = "Nuestro Trabajo - Nueva Era Digital";
 
 import { useMenu } from "../composables/useMenu";
@@ -90,10 +88,18 @@ import { EffectCube, Navigation, Pagination } from "swiper/modules";
 
 // Importa directamente el archivo JSON
 import worksData from "@/json/trabajos.json";
-import { onMounted } from "vue";
+
+const works = computed(() =>
+  worksData.works.map((work) => ({
+    ...work,
+    tecnologiasUsadas: work.used.map((used) =>
+      worksData.tecnologias.find((tec) => tec.id === used.id_tec)
+    ),
+  }))
+);
 
 // Usamos los datos directamente
-const works = worksData.works;
+const tecnoInfo = worksData.tecnologias;
 
 onMounted(() => {
   isSubMenuVisible.value = false;
@@ -116,14 +122,28 @@ section {
 
   .card_horizontal {
     width: 100%;
-    background-image: url("/prueba.jpeg");
+    position: relative;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 400px;
     border-radius: $border_radius;
     display: flex;
     overflow: hidden;
-
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.4906163148853291) 0%,
+        rgb(131, 216, 233) 30%,
+        rgb(40, 59, 151) 100%
+      ) !important;
+      z-index: -1;
+      opacity: 0.7;
+    }
     .container_info {
       width: 100%;
       padding: 2%;
@@ -158,7 +178,7 @@ section {
               display: block;
               width: 100%;
               aspect-ratio: 4/3;
-              object-fit: cover;
+              object-fit: contain;
               object-position: center;
               border-radius: 10px;
             }
@@ -176,7 +196,7 @@ section {
         height: 100%;
         margin: auto;
         padding: 2%;
-        overflow: auto;
+        overflow: hidden;
         background: #ffffff9a;
         border-radius: $border_radius;
         backdrop-filter: blur($blur);
@@ -192,6 +212,7 @@ section {
           h3 {
             width: 100%;
             text-align: center;
+            text-wrap: nowrap;
           }
           img {
             width: 100%;
@@ -200,6 +221,7 @@ section {
         p {
           height: 12rem;
           overflow-y: auto;
+          overflow-x: hidden;
         }
         .container_links {
           width: 100%;
@@ -216,7 +238,8 @@ section {
         .tecnologias {
           width: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: start;
+          gap: 1rem;
           align-items: center;
           padding: 2%;
           img {

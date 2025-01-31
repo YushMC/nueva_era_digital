@@ -2,18 +2,264 @@
   "works": [
     {
       "id": 1,
-      "name": "Orange",
-      "type": "Limpieza",
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit praesentium dicta temporibus, laudantium cumque maiores corporis iusto cum necessitatibus quam sequi doloribus reprehenderit, enim vitae ad quis soluta saepe quos. Voluptatem earum, quasi in quae deserunt quo maxime aperiam, qui optio, esse labore. Vero, facere nemo! Modi ad sequi eius explicabo deserunt quasi repellat placeat obcaecati aut, facere quas?",
-      "link": "https://orangelimpiezaydesinfeccion.com/",
-      "url_logo": "https://orangelimpiezaydesinfeccion.com/wp-content/uploads/2024/12/Logo-V3-blanco.png",
-      "url_img_1": "/trabajos/orange/portada_orange.png",
-      "url_img_2": "/trabajos/orange/cap_2.png",
-      "url_img_3": "/trabajos/orange/cap_3.png",
-      "tec_1": "/icons/wordpress.svg",
-      "tec_2": "",
-      "tec_3": "",
-      "tec_4": ""
+      "name": "CVs y Sitios Personales!",
+      "type": "General",
+      "desc": "Creamos tu CV o sitio personal de manera rápida y personalizada!",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/cvs/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/cvs/2.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 5
+        },
+        {
+          "id": 2,
+          "id_tec": 1
+        },
+        {
+          "id": 3,
+          "id_tec": 2
+        },
+        {
+          "id": 4,
+          "id_tec": 7
+        },
+        {
+          "id": 5,
+          "id_tec": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sitios Web Empresariales",
+      "type": "General",
+      "desc": "Creamos Sitios Web diseñados a la medida de tu negocio!, desde sitios estáticos hasta sitios en tiempo real y PWAs!",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/orange/portada_orange.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/orange/cap_2.png"
+        },
+        {
+          "id": 3,
+          "url": "/trabajos/orange/cap_3.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 1
+        },
+        {
+          "id": 2,
+          "id_tec": 2
+        },
+        {
+          "id": 3,
+          "id_tec": 3
+        },
+        {
+          "id": 4,
+          "id_tec": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "E-Commerce",
+      "type": "General",
+      "desc": "Creamos Sitios Web diseñados a la medida de tu negocio!, desde sitios estáticos hasta sitios en tiempo real y PWAs!",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/ecommerce/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/ecommerce/2.png"
+        },
+        {
+          "id": 3,
+          "url": "/trabajos/ecommerce/3.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Punto de Venta",
+      "type": "Negocios",
+      "desc": "Punto de venta adaptable a todos los dispositivos.",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/valentinos/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/valentinos/2.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 1
+        },
+        {
+          "id": 2,
+          "id_tec": 6
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Agencias de Viajes",
+      "type": "Viajes",
+      "desc": "Creamos tu página de agencias de viajes de manera rápida y personalizada.",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/viajes/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/viajes/2.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 7
+        },
+        {
+          "id": 2,
+          "id_tec": 9
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Aplicación de Viajes",
+      "type": "Viajes",
+      "desc": "Tu agencia de Viajes al alcance de los bolsillos de tus clientes.",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/travel/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/travel/2.png"
+        },
+        {
+          "id": 3,
+          "url": "/trabajos/travel/3.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 8
+        },
+        {
+          "id": 2,
+          "id_tec": 6
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Delivery",
+      "type": "General",
+      "desc": "Creamos aplicaciones de delivery para cualquier plataforma movil!",
+      "images": [
+        {
+          "id": 1,
+          "url": "/trabajos/marketplace/1.png"
+        },
+        {
+          "id": 2,
+          "url": "/trabajos/marketplace/2.png"
+        },
+        {
+          "id": 3,
+          "url": "/trabajos/marketplace/2.png"
+        }
+      ],
+      "used": [
+        {
+          "id": 1,
+          "id_tec": 8
+        },
+        {
+          "id": 2,
+          "id_tec": 6
+        }
+      ]
+    }
+  ],
+  "tecnologias": [
+    {
+      "id": 1,
+      "icon": "/icons/angular.svg",
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "icon": "/icons/vue.svg",
+      "name": "Vue.js"
+    },
+    {
+      "id": 3,
+      "icon": "/icons/react.svg",
+      "name": "React"
+    },
+    {
+      "id": 4,
+      "icon": "/icons/astro.svg",
+      "name": "Astro"
+    },
+    {
+      "id": 5,
+      "icon": "/icons/wordpress.svg",
+      "name": "WordPress"
+    },
+    {
+      "id": 6,
+      "icon": "/icons/laravel.svg",
+      "name": "Laravel"
+    },
+    {
+      "id": 7,
+      "icon": "/icons/html.svg",
+      "name": "HTML"
+    },
+    {
+      "id": 8,
+      "icon": "/icons/flutter.svg",
+      "name": "Flutter"
+    },
+    {
+      "id": 9,
+      "icon": "/icons/js.svg",
+      "name": "JavaScript"
     }
   ]
 }

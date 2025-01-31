@@ -21,10 +21,11 @@
               -->
             </ul>
           </div>
+          <!-- 
           <div>
             <h5>Nuestras Redes</h5>
             <ul>
-              <!-- <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li> -->
+              <!-- <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li> 
               <li>
                 <i class="fab fa-facebook-square"></i>
                 <a
@@ -47,9 +48,12 @@
                 >
               </li>
             </ul>
+            
           </div>
+          -->
         </div>
       </div>
+      <!-- 
       <div class="container_info">
         <h5>Nosotros</h5>
         <ul>
@@ -58,6 +62,7 @@
           <li>EULA</li>
         </ul>
       </div>
+    -->
       <div class="container_info">
         <h5>Enlaces</h5>
         <ul>

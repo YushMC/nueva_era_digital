@@ -182,12 +182,29 @@ section {
     gap: 5rem;
 
     .card_img {
+      position: relative;
       height: 500px;
-      background-size: cover;
+
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: $border_radius_img;
       overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.4906163148853291) 0%,
+          rgba(163, 204, 212, 0.796) 60%,
+          rgb(40, 59, 151) 100%
+        ) !important;
+        z-index: -1;
+
+        opacity: 0.7;
+      }
 
       .text_work {
         width: 100%;
@@ -196,8 +213,9 @@ section {
         visibility: hidden;
         padding-top: 20%;
         padding-bottom: 5%;
-        background: #000000f5;
-        mask-image: linear-gradient(transparent 0%, black);
+        background: #00000057;
+        backdrop-filter: blur($blur * 2);
+        //mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.575));
         @include centrar_elementos();
         flex-direction: column;
         color: #fff;

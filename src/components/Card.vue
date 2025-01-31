@@ -29,7 +29,9 @@ const img_carta = ref("");
 const precio = ref("");
 const ruta = ref("");
 const routePush = () => {
-  router.push(ruta.value);
+  window.open(
+    `https://wa.me/52${footerInfo.tel_1}?text=Hola! Me interesaría saber más de: ${titulo_carta.value}`
+  );
 };
 
 const props = defineProps({
@@ -60,6 +62,11 @@ parrafo_carta.value = props.parrafo;
 img_carta.value = props.icono;
 precio.value = props.precio;
 ruta.value = props.routePush;
+
+import footerData from "@/json/infoEmpresa.json";
+
+// Usamos los datos directamente
+const footerInfo = footerData.footer.find((t) => t.id === 1);
 </script>
 
 <style lang="scss" scoped>

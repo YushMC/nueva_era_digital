@@ -12,11 +12,11 @@
           <router-link to="/">Inicio</router-link>
           <hr />
         </div>
-        <div class="menu" @click="togleSubMenu">
-          <a
+        <div class="menu" @click="">
+          <a href="#servicios"
             >Servicios
             <span :class="{ rotarCarret: isSubMenuVisible }"
-              ><i class="fas fa-caret-down"></i></span
+              ><i class="fas fa-caret-down" v-if="false"></i></span
           ></a>
           <hr />
           <div class="sub_menu" v-if="isSubMenuVisible">
