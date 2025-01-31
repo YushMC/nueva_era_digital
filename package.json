@@ -1,7 +1,7 @@
 {
   "name": "nueva_era_digital",
   "private": true,
-  "version": "0.0.8",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@vueuse/head": "^2.0.0",
+    "puppeteer": "^24.1.1",
     "swiper": "^11.1.15",
     "vite-plugin-sitemap": "^0.7.1",
     "vue": "^3.5.13",

@@ -15,4 +15,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"), // Esto configura el alias @ para apuntar a la carpeta src
     },
   },
+  base: "https://yushmc.github.io/nueva_era_digital",
 });
