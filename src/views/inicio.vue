@@ -41,7 +41,7 @@
           class="card_img"
           v-for="work in works.slice(-2)"
           :key="work.id"
-          :style="{ backgroundImage: `url(${work.url_img_1})` }"
+          :style="{ backgroundImage: `url(${work.images[0].url})` }"
         >
           <div class="text_work">
             <h4>{{ work.name }}</h4>

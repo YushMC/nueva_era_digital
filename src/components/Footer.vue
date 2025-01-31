@@ -21,11 +21,11 @@
               -->
             </ul>
           </div>
-          <!-- 
           <div>
             <h5>Nuestras Redes</h5>
             <ul>
-              <!-- <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li> 
+              <!-- <li><i class="fab fa-tiktok"></i> {{ footerInfo.tiktok }}</li> -->
+              <!-- 
               <li>
                 <i class="fab fa-facebook-square"></i>
                 <a
@@ -36,21 +36,19 @@
                   >{{ footerInfo.facebook }}</a
                 >
               </li>
-
+              -->
               <li>
                 <i class="fab fa-instagram"></i>
                 <a
-                  :href="footerInfo.instagram"
+                  :href="'https://www.instagram.com/' + footerInfo.instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                   style="margin-left: 5px"
-                  >{{ footerInfo.instagram }}</a
+                  >@{{ footerInfo.instagram }}</a
                 >
               </li>
             </ul>
-            
           </div>
-          -->
         </div>
       </div>
       <!-- 
@@ -66,10 +64,10 @@
       <div class="container_info">
         <h5>Enlaces</h5>
         <ul>
-          <li><router-link to="/web">Desarrollo Web</router-link></li>
-          <li><router-link to="/movil">Desarrollo Móvil</router-link></li>
-          <li><router-link to="/branding">Branding</router-link></li>
-          <li><router-link to="/marketing">Marketing</router-link></li>
+          <li><router-link to="/#servicios">Desarrollo Web</router-link></li>
+          <li><router-link to="/#servicios">Desarrollo Móvil</router-link></li>
+          <li><router-link to="/#servicios">Branding</router-link></li>
+          <li><router-link to="/#servicios">Marketing</router-link></li>
         </ul>
       </div>
     </div>
@@ -107,8 +105,8 @@ footer {
     margin: auto;
     padding-bottom: 3%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 20rem;
     .container_info {
       display: flex;
       flex-direction: column;
@@ -129,9 +127,12 @@ footer {
         width: 100%;
         margin-top: 3%;
         @include contendor_doble_rejilla();
+        align-items: start !important;
         div {
           display: flex;
           flex-direction: column;
+          align-items: start;
+          justify-content: start;
           margin-left: -10px !important;
           li {
             color: #fff;
