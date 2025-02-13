@@ -32,7 +32,6 @@
 </template>
 
 <script setup>
-document.title = "Desarrollo de Escritorio - Nueva Era Digital";
 import { onMounted } from "vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";

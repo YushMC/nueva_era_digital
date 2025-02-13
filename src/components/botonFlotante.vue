@@ -21,8 +21,8 @@ const footerInfo = footerData.footer.find((t) => t.id === 1);
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
+@use "@/styles/variables" as *;
+@use "@/styles/prefabs" as *;
 .float_button {
   position: fixed;
   bottom: 10%;

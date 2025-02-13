@@ -89,9 +89,8 @@ let year = d.getFullYear();
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
-
+@use "@/styles/variables" as *;
+@use "@/styles/prefabs" as *;
 footer {
   user-select: none;
   width: 100%;

@@ -46,9 +46,8 @@ parrafo_seccion.value = props.parrafo_section;
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .sections {
   width: 80%;
   margin: 2% auto;

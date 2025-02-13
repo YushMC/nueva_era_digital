@@ -107,13 +107,14 @@ const togleSubMenu = () => {
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 header {
   width: 100dvw;
   height: 100px;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   background: $blanco_transparente;
   //background: $color_principal_transparente;
@@ -184,6 +185,7 @@ header {
           border-radius: $border_radius;
           backdrop-filter: blur($blur) !important;
           transition: all 0.3s linear;
+          background: $color_secundario;
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
           @include columnas_flexibles();
           h5 {

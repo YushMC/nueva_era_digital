@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-document.title = "Desarrollo Móvil - Nueva Era Digital";
 import { onMounted } from "vue";
 import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";

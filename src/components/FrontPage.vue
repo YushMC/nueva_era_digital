@@ -152,7 +152,6 @@ const handleMouseMove = (event) => {
   const y = event.clientY - rect.top;
 
   // Crear un elemento de tinta
-  const ink = document.createElement("div");
   ink.classList.add("ink");
 
   // Establecer la posición del elemento dentro del contenedor
@@ -187,9 +186,8 @@ onUnmounted(() => {
 
 --- #### CSS ```scss
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .container_front_page {
   position: relative; /* Esto asegura que los elementos 'ink' se posicionen correctamente */
   width: 100%;

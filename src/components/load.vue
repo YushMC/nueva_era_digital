@@ -13,8 +13,8 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@use "../styles/prefabs" as *;
-@use "../styles/variables" as *;
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .container_spinner {
   position: fixed;
   width: 100%;

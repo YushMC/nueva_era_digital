@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-document.title = "Branding - Nueva Era Digital";
 import { onMounted } from "vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";

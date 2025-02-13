@@ -85,9 +85,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use "../styles/prefabs" as *;
-@use "../styles/variables" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .cards_empresa {
   background: $negro_transparente;
   width: 80%;

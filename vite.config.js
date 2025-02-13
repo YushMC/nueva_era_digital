@@ -7,12 +7,19 @@ export default defineConfig({
   plugins: [
     vue(),
     sitemap({
-      hostname: "http://localhost:5173",
+      hostname: "https://nuevaeradigital.mx",
     }),
   ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"), // Esto configura el alias @ para apuntar a la carpeta src
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/styles/style.scss" as *;`, // Cambié @use por @import aquí
+      },
     },
   },
 });

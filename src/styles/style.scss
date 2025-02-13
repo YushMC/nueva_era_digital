@@ -1,23 +1,30 @@
-@use "./variables" as *;
-@use "./prefabs" as *;
+@use "./variables.scss";
+@use "./prefabs.scss";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box !important;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  //text-shadow: 2px -1px 12px rgba(0, 0, 0, 0.329);
-}
 hr {
   border-radius: 5px;
   border: none;
-  background: $color_secundario;
+  background: variables.$color_secundario;
   height: 3px;
 }
 a {
@@ -28,27 +35,27 @@ a {
 }
 .container_buttons {
   width: 100%;
-  @include contenedores_flexibles();
+  @include prefabs.contenedores_flexibles();
 
   a,
   button {
     color: #fff;
-    background-color: $color_principal;
+    background-color: variables.$color_principal;
     padding: 2% 7%;
-    border-radius: $border_radius;
+    border-radius: variables.$border_radius;
     transition: all 0.3s linear;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: $color_principal_transparente;
+      background-color: variables.$color_principal_transparente;
       transform: scale(1.1);
     }
   }
 }
 .titulos {
   font-size: 3rem;
-  color: $color_principal;
+  color: variables.$color_principal;
   font-weight: 700;
   text-align: center;
   @media screen and (max-width: 900px) {
@@ -60,7 +67,7 @@ a {
 }
 .subtitulos {
   font-size: 0.8rem;
-  color: $color_principal_transparente;
+  color: variables.$color_principal_transparente;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -104,7 +111,9 @@ p {
   border-radius: 100%;
   pointer-events: none;
   filter: blur(5px); /* Aplica un blur para difuminar los bordes */
-  animation: fade-out 0.6s ease-out, gradienteAnimado 4s linear infinite;
+  animation:
+    fade-out 0.6s ease-out,
+    gradienteAnimado 4s linear infinite;
   /* Animación para hacer que el fondo del degradado se mueva */
   @keyframes gradienteAnimado {
     0% {
@@ -138,7 +147,7 @@ p {
 section {
   width: 100%;
   margin: 2% 0;
-  @include columnas_flexibles();
+  @include prefabs.columnas_flexibles();
 
   @media screen and (max-width: 900px) {
     width: 80%;
@@ -149,7 +158,7 @@ section {
 .content_cards {
   width: 80%;
   margin: auto;
-  @include contenedores_rejilla();
+  @include prefabs.contenedores_rejilla();
   flex-wrap: wrap;
   padding: 1% 0;
 }
@@ -159,7 +168,7 @@ section {
   margin: auto;
   background-attachment: fixed;
 
-  @include columnas_flexibles();
+  @include prefabs.columnas_flexibles();
   .container_buttons {
     width: 100%;
     display: flex;
@@ -178,7 +187,7 @@ section {
   .container_cards_works {
     width: 80%;
     margin: 1% auto;
-    @include contendor_doble_rejilla();
+    @include prefabs.contendor_doble_rejilla();
     gap: 5rem;
 
     .card_img {
@@ -188,7 +197,7 @@ section {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: $border_radius_img;
+      border-radius: variables.$border_radius_img;
       overflow: hidden;
       &::before {
         content: "";
@@ -214,9 +223,9 @@ section {
         padding-top: 20%;
         padding-bottom: 5%;
         background: #00000057;
-        backdrop-filter: blur($blur * 2);
+        backdrop-filter: blur(variables.$blur * 2);
         //mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.575));
-        @include centrar_elementos();
+        @include prefabs.centrar_elementos();
         flex-direction: column;
         color: #fff;
         transition: all 0.3s linear;
@@ -229,12 +238,12 @@ section {
         }
         .container_links {
           width: 20%;
-          @include centrar_elementos();
+          @include prefabs.centrar_elementos();
           a {
             padding: 1rem;
-            background: $color_principal;
+            background: variables.$color_principal;
             color: #fff;
-            border-radius: $border_radius;
+            border-radius: variables.$border_radius;
           }
         }
       }
@@ -242,7 +251,7 @@ section {
       &:hover .text_work {
         opacity: 1;
         visibility: visible;
-        backdrop-filter: blur($blur);
+        backdrop-filter: blur(variables.$blur);
       }
       @media screen and (max-width: 900px) {
         width: 100%;
@@ -255,7 +264,7 @@ section {
     }
     @media screen and (max-width: 900px) {
       width: 100%;
-      @include columnas_flexibles();
+      @include prefabs.columnas_flexibles();
       height: 700px;
     }
   }
@@ -272,20 +281,20 @@ section {
   margin: 3% auto;
   padding: 3%;
   background: #939dc717;
-  backdrop-filter: blur($blur);
-  border-radius: $border_radius;
+  backdrop-filter: blur(variables.$blur);
+  border-radius: variables.$border_radius;
   border: 5px solid transparent;
   border-image-source: conic-gradient(
     from var(--a),
-    $color_principal,
-    $color_principal_transparente,
+    variables.$color_principal,
+    variables.$color_principal_transparente,
     #ffffff00
   );
   border-image-slice: 2;
   border-image-width: 0.5rem;
   animation: move 3s infinite cubic-bezier(0, 0.81, 1, 0.11);
   transition: all 0.3s linear;
-  @include columnas_flexibles();
+  @include prefabs.columnas_flexibles();
 
   h5 {
     text-transform: uppercase;
@@ -299,7 +308,7 @@ section {
   }
 
   h3 {
-    color: $color_principal;
+    color: variables.$color_principal;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2%;
@@ -310,17 +319,17 @@ section {
 
   .text_action_div {
     width: 100%;
-    @include columnas_flexibles();
+    @include prefabs.columnas_flexibles();
     gap: 2rem;
 
     .container_buttons {
-      @include centrar_elementos();
+      @include prefabs.centrar_elementos();
       width: 100%;
       justify-content: center !important;
     }
 
     @media screen and (max-width: 900px) {
-      @include columnas_flexibles();
+      @include prefabs.columnas_flexibles();
     }
   }
 

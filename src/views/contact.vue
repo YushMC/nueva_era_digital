@@ -149,9 +149,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use "../styles/prefabs" as *;
-@use "../styles/variables" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .container_contact {
   padding: 5% 10%;
   background: $negro_transparente;

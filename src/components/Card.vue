@@ -70,9 +70,8 @@ const footerInfo = footerData.footer.find((t) => t.id === 1);
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/_variables.scss" as *;
-@use "@/styles/_prefabs.scss" as *;
-
+@use "@/styles/variables.scss" as *;
+@use "@/styles/prefabs.scss" as *;
 .card {
   width: 100%;
   border-radius: $border_radius;

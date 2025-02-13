@@ -1,6 +1,6 @@
 import { ViteSSG } from "vite-ssg";
 import { createHead } from "@unhead/vue";
-import "./styles/style.scss";
+// import "./styles/style.css";
 import App from "./App.vue";
 import router from "./router";
 
