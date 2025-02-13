@@ -369,7 +369,7 @@ span {
   .bar {
     width: 100%;
     height: 5px;
-    background-color: #333;
+    background-color: #1735bb;
     transition: all 0.3s ease;
   }
 

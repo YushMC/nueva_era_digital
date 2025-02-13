@@ -3,9 +3,9 @@
     <div class="container_form">
       <h2>Contáctanos</h2>
       <p>
-        ¡Queremos saber más acerca de tu proyecto! Déjanos tu información y
-        cuéntenos un poco al respecto, nos pondremos en contacto contigo lo
-        antes posible.
+        ¡Querémos saber más acerca de tu proyecto! Déjanos tu información y
+        cuéntanos un poco al respecto, nos podrémos en contacto contigo lo antes
+        posible.
       </p>
       <form @submit.prevent="validateForm">
         <div>
@@ -55,8 +55,29 @@
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "Nueva Era Digital - Contáctanos",
+  meta: [
+    {
+      name: "description",
+      content:
+        "¡Querémos saber más acerca de tu proyecto! Déjanos tu información y cuéntanos un poco al respecto, nos podrémos en contacto contigo lo antes posible.",
+    },
+    {
+      property: "og:title",
+      content: "Nueva Era Digital - Contactanos",
+    },
+    {
+      property: "og:description",
+      content:
+        "¡Querémos saber más acerca de tu proyecto! Déjanos tu información y cuéntanos un poco al respecto, nos podrémos en contacto contigo lo antes posible.",
+    },
+    { property: "og:url", content: "https://nuevaeradigital.mx/contact" },
+  ],
+});
+
 import { onMounted, reactive, ref } from "vue";
 import { useMenu } from "../composables/useMenu";
 const { isSubMenuVisible, isOpen } = useMenu();

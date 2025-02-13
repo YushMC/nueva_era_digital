@@ -33,9 +33,30 @@
 </template>
 
 <script setup>
-document.title = "Nosotros - Nueva Era Digital";
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "Nueva Era Digital - Sobre Nosotros",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Somos una empresa de tecnología especializada en la creación de soluciones digitales para negocios de todos los tamaños. Con un equipo de expertos en desarrollo web, aplicaciones móviles, aplicaciones de escritorio, branding y manejo de redes sociales!",
+    },
+    {
+      property: "og:title",
+      content: "Nueva Era Digital - Sobre Nosotros",
+    },
+    {
+      property: "og:description",
+      content:
+        "Somos una empresa de tecnología especializada en la creación de soluciones digitales para negocios de todos los tamaños. Con un equipo de expertos en desarrollo web, aplicaciones móviles, aplicaciones de escritorio, branding y manejo de redes sociales!",
+    },
+    { property: "og:url", content: "https://nuevaeradigital.mx/about-us" },
+  ],
+});
+
 import Section from "../components/Section.vue";
-import FrontPage from "../components/FrontPage.vue";
 // Importa directamente el archivo JSON
 import cardsData from "@/json/infoCartas.json";
 

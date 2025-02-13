@@ -67,8 +67,29 @@
 </template>
 
 <script setup>
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "Nueva Era Digital - Nuestro Trabajo",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Contamos con un amplio cátalogo de proyectos y transformaciones realizadas. Nostros te ayudamos a conviertir tu idea o negocio al mundo digital.",
+    },
+    {
+      property: "og:title",
+      content: "Nueva Era Digital - Nuestro Trabajo",
+    },
+    {
+      property: "og:description",
+      content:
+        "Contamos con un amplio cátalogo de proyectos y transformaciones realizadas. Nostros te ayudamos a conviertir tu idea o negocio al mundo digital.",
+    },
+    { property: "og:url", content: "https://nuevaeradigital.mx/our-work" },
+  ],
+});
 import { onMounted, computed } from "vue";
-document.title = "Nuestro Trabajo - Nueva Era Digital";
 
 import { useMenu } from "../composables/useMenu";
 const { isSubMenuVisible, isOpen } = useMenu();

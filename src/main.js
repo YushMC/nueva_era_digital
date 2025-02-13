@@ -1,12 +1,16 @@
-import { createApp } from "vue";
-import { createHead } from "@vueuse/head";
+import { ViteSSG } from "vite-ssg";
+import { createHead } from "@unhead/vue";
 import "./styles/style.scss";
 import App from "./App.vue";
 import router from "./router";
 
-const app = createApp(App);
-const head = createHead();
-
-app.use(router);
-app.use(head); // Agrega el gestor de meta tags
-app.mount("#app");
+// Función para crear la app con Vite SSG
+export const createApp = ViteSSG(
+  App,
+  { routes: router.options.routes }, // Asegura que use las rutas definidas en Vue Router
+  ({ app, router }) => {
+    const head = createHead();
+    app.use(router);
+    app.use(head); // Agrega el gestor de meta tags
+  }
+);

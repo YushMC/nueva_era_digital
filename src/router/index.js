@@ -61,14 +61,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory("/"),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    // Si hay una posición guardada (ej. al usar el botón de "atrás"), regresa a esa posición
-    if (savedPosition) {
-      return savedPosition;
-    }
-    // Si no, desplaza a la parte superior de la página
-    return { top: 0 };
-  },
 });
 
 export default router;

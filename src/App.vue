@@ -5,6 +5,27 @@ import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import { useRoute } from "vue-router";
 
+//seo
+import { useHead } from "@unhead/vue";
+
+useHead({
+  meta: [
+    { property: "og:site_name", content: "Conciencia del Ser Divino" },
+
+    { property: "og:locale", content: "es_MX" },
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: "https://nuevaeradigital.mx/logo_og.png" },
+    {
+      name: "robots",
+      content:
+        "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    },
+  ],
+  link: [
+    //cual es la ruta cononica o la base
+    { rel: "canonical", href: "https://nuevaeradigital.mx/" },
+  ],
+});
 // Accede a la información de la ruta actual
 const route = useRoute();
 
@@ -45,7 +66,9 @@ const isContactPage = computed(() => route.path === "/contact");
 .blur {
   &-enter-active,
   &-leave-active {
-    transition: opacity 0.3s, filter 0.3s;
+    transition:
+      opacity 0.3s,
+      filter 0.3s;
   }
 
   &-enter-from,

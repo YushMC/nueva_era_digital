@@ -77,7 +77,31 @@
 </template>
 
 <script setup>
-document.title = "Inicio - Nueva Era Digital";
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "Nueva Era Digital - Inicio",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Somos una empresa dedicada al desarrollo web, móvil, marketing digital y branding, ubicada en León Guanajuato. Nosotros te ayudamos a representar tus ideas y negocios en el mundo digital.",
+    },
+    {
+      property: "og:title",
+      content:
+        "Nueva Era Digital - Damos forma a tus ideas en el mundo digital.",
+    },
+    {
+      property: "og:description",
+      content:
+        "Somos una empresa dedicada al desarrollo web, móvil, marketing digital y branding, ubicada en León Guanajuato. Nosotros te ayudamos a representar tus ideas y negocios en el mundo digital.",
+    },
+
+    { property: "og:url", content: "https://nuevaeradigital.mx" },
+  ],
+});
+
 import Card from "../components/Card.vue";
 import FrontPage from "../components/FrontPage.vue";
 import Section from "../components/Section.vue";
