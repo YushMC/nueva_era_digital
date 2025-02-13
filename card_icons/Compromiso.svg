@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666666 8.4666666"
+   version="1.1"
+   id="svg15292"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Compromiso.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15294"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="10.582793"
+     inkscape:cx="11.197422"
+     inkscape:cy="14.929896"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs15289" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect15465"
+       style="font-variation-settings:'wght' 700;fill:none;stroke:#808080;stroke-width:0.529167;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="m 0.75003827,2.8428315 v -1.7177742 0 H 6.9503547 v 0.5991196"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path15890"
+       style="font-variation-settings:'wght' 700;fill:none;stroke:#808080;stroke-width:0.529167;stroke-linecap:square;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="m 6.9503547,4.1991768 v 3.126197 H 0.75003827 V 2.8428315"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="font-variation-settings:'wght' 700;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;paint-order:fill markers stroke"
+       d="M 1.518491,3.5117908 2.969963,5.9102142 8.4004842,2.7878427 V 1.4622067 L 3.4819335,4.2957749 2.6496499,2.8539618 Z"
+       id="path17345"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="font-variation-settings:'wght' 700;fill:none;fill-opacity:1;stroke:#808080;stroke-width:0.079375;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 1.4509755,3.7485616 1.301134,2.1143602"
+       id="path21085"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="font-variation-settings:'wght' 700;fill:none;fill-opacity:1;stroke:#808080;stroke-width:0.079375;stroke-linecap:square;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 1.4072232,4.0173253 2.4708451,5.7316651"
+       id="path22539"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
