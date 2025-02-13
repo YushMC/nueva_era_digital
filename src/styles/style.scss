@@ -18,8 +18,15 @@
     "Helvetica Neue",
     sans-serif;
 }
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: red !important;
+}
 html {
   scroll-behavior: smooth;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 hr {
   border-radius: 5px;
