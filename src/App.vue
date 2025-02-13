@@ -10,7 +10,7 @@ import { useHead } from "@unhead/vue";
 
 useHead({
   meta: [
-    { property: "og:site_name", content: "Conciencia del Ser Divino" },
+    { property: "og:site_name", content: "Nueva Era Digital" },
 
     { property: "og:locale", content: "es_MX" },
     { property: "og:type", content: "website" },
